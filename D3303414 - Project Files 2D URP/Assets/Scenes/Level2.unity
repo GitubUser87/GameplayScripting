@@ -274,7 +274,7 @@ GameObject:
   - component: {fileID: 860019290}
   m_Layer: 0
   m_Name: Asteroid (1)
-  m_TagString: Untagged
+  m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 1160889731}
   m_Layer: 0
   m_Name: Asteroid (2)
-  m_TagString: Untagged
+  m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -571,7 +571,7 @@ GameObject:
   - component: {fileID: 1438413466}
   m_Layer: 0
   m_Name: Asteroid (3)
-  m_TagString: Untagged
+  m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -788,7 +788,7 @@ GameObject:
   - component: {fileID: 1641212656}
   m_Layer: 0
   m_Name: Asteroid (5)
-  m_TagString: Untagged
+  m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -921,7 +921,7 @@ GameObject:
   - component: {fileID: 1872134499}
   m_Layer: 0
   m_Name: Asteroid
-  m_TagString: Untagged
+  m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1141,6 +1141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f984472743140e44a5fd231250ea427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSpeed: 5
+  rotSpeed: 360
 --- !u!114 &2015092177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1227,7 +1229,7 @@ GameObject:
   - component: {fileID: 2040842754}
   m_Layer: 0
   m_Name: Asteroid (4)
-  m_TagString: Untagged
+  m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class PlayerControl2 : MonoBehaviour
 {
-    float maxSpeed = 3.5f;
-    float rotSpeed = 180f;
-   
-    
+
+    public float maxSpeed = 5f;
+    public float rotSpeed = 360f;
+
     void Update()
     {
+        
+
         Quaternion rot = transform.rotation;
         float z = rot.eulerAngles.z;
         z -= Input.GetAxis("Horizontal") * rotSpeed * Time.deltaTime;
@@ -18,12 +20,13 @@ public class PlayerControl2 : MonoBehaviour
         transform.rotation = rot;
 
         Vector3 pos = transform.position;
-        pos.y += Input.GetAxis("Vertical") * maxSpeed * Time.deltaTime;
-        pos.x += Input.GetAxis("Horizontal") * maxSpeed * Time.deltaTime;
-        transform.position = pos;
+        //pos.y += Input.GetAxis("Vertical") * maxSpeed * Time.deltaTime;
+        //pos.x += Input.GetAxis("Horizontal") * maxSpeed * Time.deltaTime;
+        //transform.position = pos;
 
         Vector3 velocity = new Vector3(0, Input.GetAxis("Vertical") * maxSpeed * Time.deltaTime, 0);
         pos += rot * velocity;
 
+        transform.position = pos;
     }
 }

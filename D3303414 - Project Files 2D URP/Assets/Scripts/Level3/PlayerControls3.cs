@@ -35,7 +35,8 @@ public class PlayerControls3 : MonoBehaviour
         }
         if (Input.GetButtonDown("Fire3"))
         {
-            isRunning = true; 
+            isRunning = true;
+            print("Hello");
         }
         else
         {

@@ -3,24 +3,24 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class Score : MonoBehaviour
 {
-    public Text MyscoreText;
-    private int ScoreNum;
+    public UnityEvent OnTouched = new UnityEvent();
+    
 
-    void Start()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        ScoreNum = 0;
-        MyscoreText.text = "Score : " + ScoreNum;
-    }
-
-    private void OnTriggerEnter2D(Collider2D Asteroid)
-    {
-        if (Asteroid.tag == "Asteroid")
+        if (other.tag == "Bullet")
         {
-            ScoreNum += 1;
-            MyscoreText.text = "Score : " + ScoreNum;
+            OnTouched.Invoke(); 
+            Destroy(gameObject);
+        }
+
+        if (other.tag == "Player")
+        {
+           Destroy(other.gameObject);    
         }
     }
 }

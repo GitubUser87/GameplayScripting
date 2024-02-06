@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Asteroid
+  - Bullet
   layers:
   - Default
   - TransparentFX

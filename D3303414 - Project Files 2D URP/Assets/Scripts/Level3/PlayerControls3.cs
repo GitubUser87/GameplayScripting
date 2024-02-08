@@ -7,13 +7,15 @@ using UnityEngine;
 public class PlayerControls3 : MonoBehaviour
 {
     public float move;
-    public float power;
+    public float power = 4f;
+ 
     
 
     private Rigidbody2D rb;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        
     }
 
 
@@ -26,5 +28,6 @@ public class PlayerControls3 : MonoBehaviour
         {
            rb.velocity = new Vector2(move * power, rb.velocity.y);
         }
+      
     }
     }

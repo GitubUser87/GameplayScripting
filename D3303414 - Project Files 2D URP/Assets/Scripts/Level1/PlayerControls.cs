@@ -21,7 +21,6 @@ public class PlayerControls : MonoBehaviour
         rb.velocity = new Vector2(move * speed, rb.velocity.y);
         if (Input.GetButtonDown("Jump") && !isjumping)
         {
-            
             rb.AddForce(new Vector2(rb.velocity.x, jump));
             isjumping = true;
         }

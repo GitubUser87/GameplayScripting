@@ -6,9 +6,11 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.SocialPlatforms.GameCenter;
 
+
 public class Score : MonoBehaviour
 {
     public UnityEvent OnTouched = new UnityEvent();
+ 
     
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -28,6 +30,6 @@ public class Score : MonoBehaviour
 
     public void SpawnNextCircle()
     {
-       
+
     }
 }

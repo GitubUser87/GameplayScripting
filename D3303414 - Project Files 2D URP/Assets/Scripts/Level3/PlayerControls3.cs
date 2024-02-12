@@ -26,8 +26,10 @@ public class PlayerControls3 : MonoBehaviour
        
         if (Input.GetButtonDown("Jump"))
         {
-           rb.velocity = new Vector2(move * power, rb.velocity.y);
+            rb.velocity = new Vector2(move * power, rb.velocity.y);
+            FindObjectOfType<AudioManager>().Play("PlayerJump");
         }
+   
       
     }
     }

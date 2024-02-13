@@ -17,9 +17,12 @@ public class Score : MonoBehaviour
     {
         if (other.tag == "Bullet")
         {
-            OnTouched.Invoke(); 
+            OnTouched.Invoke();
+            //Will find the audio and play the sound that has that name attached to it.
+            FindObjectOfType<AudioManager>().Play("AsteroidDestruction");
             Destroy(gameObject);
             SpawnNextCircle();
+
         }
 
         if (other.tag == "Player")

@@ -23,10 +23,12 @@ public class PlayerControls : MonoBehaviour
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump));
             isjumping = true;
+            //Will find the audio and play the sound that has that name attached to it.
             FindObjectOfType<AudioManager>().Play("PlayerJump");
         }
 
     }
+    //Will make sure the player can't jump unless they have touched the ground again.
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))

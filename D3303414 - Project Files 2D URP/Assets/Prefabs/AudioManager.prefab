@@ -60,3 +60,23 @@ MonoBehaviour:
     volume: 1
     pitch: 3
     source: {fileID: 0}
+  - name: DashSound
+    clip: {fileID: 8300000, guid: 0f6e7a6734e2abb418d9bf9f28a0e5b1, type: 3}
+    volume: 1
+    pitch: 3
+    source: {fileID: 0}
+  - name: ButtonSound
+    clip: {fileID: 8300000, guid: dbe960ce165b44445a4e1f4124ee21c7, type: 3}
+    volume: 1
+    pitch: 3
+    source: {fileID: 0}
+  - name: MenuSound
+    clip: {fileID: 8300000, guid: 3604224eee574914a87fdf3afd9b60bf, type: 3}
+    volume: 1
+    pitch: 3
+    source: {fileID: 0}
+  - name: DeathSound
+    clip: {fileID: 8300000, guid: ff109254cc4ef6647af87177172d8a45, type: 3}
+    volume: 1
+    pitch: 3
+    source: {fileID: 0}

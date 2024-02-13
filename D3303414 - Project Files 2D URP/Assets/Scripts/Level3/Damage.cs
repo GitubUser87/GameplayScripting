@@ -8,6 +8,8 @@ public class Damage : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            //Will find the audio and play the sound that has that name attached to it.
+            FindObjectOfType<AudioManager>().Play("DeathSound");
             Destroy(other.gameObject);
         }
             

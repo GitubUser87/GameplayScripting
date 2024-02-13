@@ -13,6 +13,8 @@ public class ButtonControls : MonoBehaviour
         {
             door.SetActive(false);
             button.SetActive(false);
+            //Will find the audio and play the sound that has that name attached to it.
+            FindObjectOfType<AudioManager>().Play("ButtonSound");
         }
         else
         {

@@ -545,26 +545,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4874507266213768023, guid: 7c1deddef3bf0bc4bb12ef16fbd997c2, type: 3}
-      propertyPath: sounds.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4874507266213768023, guid: 7c1deddef3bf0bc4bb12ef16fbd997c2, type: 3}
-      propertyPath: sounds.Array.data[3].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 0f6e7a6734e2abb418d9bf9f28a0e5b1, type: 3}
-    - target: {fileID: 4874507266213768023, guid: 7c1deddef3bf0bc4bb12ef16fbd997c2, type: 3}
-      propertyPath: sounds.Array.data[3].name
-      value: DashSound
-      objectReference: {fileID: 0}
-    - target: {fileID: 4874507266213768023, guid: 7c1deddef3bf0bc4bb12ef16fbd997c2, type: 3}
-      propertyPath: sounds.Array.data[3].pitch
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4874507266213768023, guid: 7c1deddef3bf0bc4bb12ef16fbd997c2, type: 3}
-      propertyPath: sounds.Array.data[3].volume
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5943538599485759390, guid: 7c1deddef3bf0bc4bb12ef16fbd997c2, type: 3}
       propertyPath: m_Name
       value: AudioManager

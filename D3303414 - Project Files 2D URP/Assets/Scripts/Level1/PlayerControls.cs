@@ -33,6 +33,7 @@ public class PlayerControls : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ground"))
         {
+            //This will set it so that when the player touches anything with the ground tag they will be allowed to jump again.
             isjumping = false;
         }
     }

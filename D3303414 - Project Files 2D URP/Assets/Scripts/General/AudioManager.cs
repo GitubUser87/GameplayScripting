@@ -26,6 +26,7 @@ public class AudioManager : MonoBehaviour
 
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
+            //This will find the source of all the sounds located in the file.
         }
     }
 

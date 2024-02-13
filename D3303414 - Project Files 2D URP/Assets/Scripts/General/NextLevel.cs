@@ -12,6 +12,7 @@ public class NextLevel : MonoBehaviour
         if (other.tag == "Player")
         {
             SceneManager.LoadScene(nextLevel);
+            //This will load the next level that has been entered into the load scene.
         }
     }
 }

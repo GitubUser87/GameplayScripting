@@ -15,6 +15,7 @@ public class Bullets : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            //When the bullet collides it will be destroyed.
             Destroy(other.gameObject);
             Destroy(gameObject);
         }

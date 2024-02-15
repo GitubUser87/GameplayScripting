@@ -8,6 +8,7 @@ public class ObstacleDeletion : MonoBehaviour
     {
         if (other.tag == "Asteroid")
         {
+            //This will check to see if the asteroid has hit the kill line and delete it. This is done to prevent them falling endlessly.
             Destroy(other.gameObject);
         }
     }

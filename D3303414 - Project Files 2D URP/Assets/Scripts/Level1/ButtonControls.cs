@@ -11,6 +11,7 @@ public class ButtonControls : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            //This will make it so that the button can't be triggered twice and the door will disappear.
             door.SetActive(false);
             button.SetActive(false);
             //Will find the audio and play the sound that has that name attached to it.
@@ -18,6 +19,7 @@ public class ButtonControls : MonoBehaviour
         }
         else
         {
+            //This will make it so that the door will stay closed until the button is pressed.
             door.SetActive(true);
         }
     }

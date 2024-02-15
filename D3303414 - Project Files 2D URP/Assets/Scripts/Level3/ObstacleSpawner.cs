@@ -19,14 +19,16 @@ public class ObstacleSpawner : MonoBehaviour
         {
             spawn();
             SpawnTime = Time.time + TimeBetweenSpawn;
+            //This will delay the spawn between each round as to not lag the machine or make it impossible to play.
         }
     }
 
     void spawn()
     {
+        //This will pick a random float from the values that have been entered.
         float X = Random.Range(minX, maxY);
         float Y = Random.Range(minY, maxX);
-
+        //This will then spawn the object at one of the selected floats.
         Instantiate(Obstacle, transform.position + new Vector3(X, Y, 0), transform.rotation);
     }
 }

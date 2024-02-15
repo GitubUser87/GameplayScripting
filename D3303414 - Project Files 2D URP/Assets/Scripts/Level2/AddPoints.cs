@@ -9,6 +9,7 @@ public class AddPoints : MonoBehaviour
     public Text MyscoreText;
     public void AddScore(int toaddscore)
     {
+        //This will add a point to the score for everytime the object is destroyed.
         score += toaddscore;
         MyscoreText.text = "Score : " + score;
     }

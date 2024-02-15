@@ -28,6 +28,7 @@ public class SurvivalTimer : MonoBehaviour
 
        void DisplayTime (float timeToDiplay)
         {
+            //This will make it so that over the course of the game the clock will constantly be going up.
             timeToDiplay += 1;
             float minutes = Mathf.FloorToInt(timeToDiplay / 60);
             float seconds = Mathf.FloorToInt(timeToDiplay % 60);

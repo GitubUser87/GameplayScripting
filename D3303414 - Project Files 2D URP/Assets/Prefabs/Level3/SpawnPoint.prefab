@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Obstacle: {fileID: 7385886167981604045, guid: 95b830e5857023842a80e6e2f1a4f8cb, type: 3}
-  maxX: 7
-  minX: -7
-  maxY: 4.9
-  minY: 4.9
+  maxX: 6
+  minX: -6
+  maxY: 2
+  minY: 2
   TimeBetweenSpawn: 3

@@ -11,8 +11,6 @@ public class PlayerControls : MonoBehaviour
 
     private bool isjumping;
 
-    bool isRunning = false;
-
     private Rigidbody2D rb;
     void Start()
     {
@@ -22,6 +20,7 @@ public class PlayerControls : MonoBehaviour
     {
         move = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(move * speed, rb.velocity.y);
+        //This will make it so that unless both of the requirements have been met then the code below won't function.
         if (Input.GetButtonDown("Jump") && !isjumping)
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump));

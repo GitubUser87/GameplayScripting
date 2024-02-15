@@ -9,7 +9,9 @@ public class KillZone : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Destroy(other.gameObject);  
+            Destroy(other.gameObject);
+            //Will find the audio and play the sound that has that name attached to it.
+            FindObjectOfType<AudioManager>().Play("DeathSound");
             Application.Quit();
         }
     }

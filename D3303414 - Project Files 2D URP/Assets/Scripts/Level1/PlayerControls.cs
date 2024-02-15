@@ -6,9 +6,13 @@ public class PlayerControls : MonoBehaviour
 {
     public float move;
     public float speed;
+
     public float jump;
 
     private bool isjumping;
+
+    bool isRunning = false;
+
     private Rigidbody2D rb;
     void Start()
     {
@@ -16,7 +20,6 @@ public class PlayerControls : MonoBehaviour
     }
     void Update()
     {
-
         move = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(move * speed, rb.velocity.y);
         if (Input.GetButtonDown("Jump") && !isjumping)
@@ -26,6 +29,7 @@ public class PlayerControls : MonoBehaviour
             //Will find the audio and play the sound that has that name attached to it.
             FindObjectOfType<AudioManager>().Play("PlayerJump");
         }
+
 
     }
     //Will make sure the player can't jump unless they have touched the ground again.

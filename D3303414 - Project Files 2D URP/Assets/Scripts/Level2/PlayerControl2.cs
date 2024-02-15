@@ -7,7 +7,7 @@ public class PlayerControl2 : MonoBehaviour
 {
 
     public float maxSpeed = 5f;
-    public float rotSpeed = 360f;
+    public float rotSpeed = 720f;
 
     void Update()
     {
@@ -15,7 +15,7 @@ public class PlayerControl2 : MonoBehaviour
 
         Quaternion rot = transform.rotation;
         float z = rot.eulerAngles.z;
-        z -= Input.GetAxis("Horizontal") * rotSpeed * Time.deltaTime;
+        z -= Input.GetAxis("HorizontalRight") * rotSpeed * Time.deltaTime;
         rot = Quaternion.Euler(0, 0, z);
         transform.rotation = rot;
 

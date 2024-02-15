@@ -1498,6 +1498,7 @@ GameObject:
   - component: {fileID: 2015092176}
   - component: {fileID: 2015092177}
   - component: {fileID: 2015092179}
+  - component: {fileID: 2015092184}
   - component: {fileID: 2015092182}
   - component: {fileID: 2015092183}
   m_Layer: 0
@@ -1548,7 +1549,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: d8b2651605096a0478ed388902a8f7a1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 33c6f511093421544b3a25eaa0674f8d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1897,6 +1898,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2015092184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015092172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae157c3aacc2e8a46a2b4bde496a2280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lives: 3
+  respawnPosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &2088359884
 PrefabInstance:
   m_ObjectHideFlags: 0

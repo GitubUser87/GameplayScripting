@@ -8,6 +8,7 @@ public class PlayerControls3 : MonoBehaviour
 {
     public float move;
     public float power = 4f;
+    public float health = 3f;
 
     private Rigidbody2D rb;
     void Start()
@@ -28,5 +29,10 @@ public class PlayerControls3 : MonoBehaviour
         }
    
       
+    }
+    public void Damage()
+    {
+       // FindObjectOfType<AudioManager>().Play("DeathSound");
+       // Destroy(other.gameObject);
     }
     }

@@ -22,6 +22,7 @@ public class MovingPlatform : MonoBehaviour
         if (Vector2.Distance(transform.position, startPoint.position) < .1f) targetPos = endPoint.position;
 
         transform.position = Vector2.MoveTowards(transform.position, targetPos, Speed * Time.deltaTime);
+        
     }
 
 

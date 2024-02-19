@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1374214443561721804}
   - component: {fileID: -1135512844811142604}
   - component: {fileID: 1834088577327608530}
+  - component: {fileID: 3896676894086780100}
   m_Layer: 0
   m_Name: Asteroid
   m_TagString: Asteroid
@@ -245,3 +246,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3896676894086780100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257236649752432436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14fca1b8ba2956047852ea7ed381a872, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  range: 0.5
+  maxDistance: 6

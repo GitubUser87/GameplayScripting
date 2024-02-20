@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -1135512844811142604}
   - component: {fileID: 1834088577327608530}
   - component: {fileID: 3896676894086780100}
+  - component: {fileID: -304485412219137906}
   m_Layer: 0
   m_Name: Asteroid
   m_TagString: Asteroid
@@ -138,7 +139,7 @@ MonoBehaviour:
   OnTouched:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7454823956472236405, guid: 21e4a83697f47f144a1aa9de36fa0f17, type: 3}
         m_TargetAssemblyTypeName: AddPoints, Assembly-CSharp
         m_MethodName: 
         m_Mode: 3
@@ -260,4 +261,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   range: 0.5
-  maxDistance: 6
+  maxDistance: 10
+--- !u!114 &-304485412219137906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257236649752432436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20d183a951a256646b2f4378d9906296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

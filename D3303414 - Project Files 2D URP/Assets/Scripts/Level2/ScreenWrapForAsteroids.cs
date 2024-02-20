@@ -19,8 +19,8 @@ public class ScreenWrapForAsteroids : MonoBehaviour
         distanceZ = Mathf.Abs(cam.transform.position.z + transform.position.z);
         leftConstraint = cam.ScreenToWorldPoint(new Vector3(0.0f, 0.0f, distanceZ)).x;
         rightConstraint = cam.ScreenToWorldPoint(new Vector3(Screen.width, 0.0f, distanceZ)).x;
-        bottomConstraint = cam.ScreenToWorldPoint(new Vector3(0, 0, distanceZ)).y;
-        topConstraint = cam.ScreenToWorldPoint(new Vector3(0, Screen.height, distanceZ)).y;
+        bottomConstraint = cam.ScreenToWorldPoint(new Vector3(0.0f, 0.0f, distanceZ)).y;
+        topConstraint = cam.ScreenToWorldPoint(new Vector3(0.0f, Screen.height, distanceZ)).y;
         
     }
 
@@ -34,11 +34,11 @@ public class ScreenWrapForAsteroids : MonoBehaviour
         {
             transform.position = new Vector3(leftConstraint, transform.position.y, transform.position.z);
         }
-        if (transform.position.x < bottomConstraint - buffer)
+        if (transform.position.y < bottomConstraint - buffer)
         {
             transform.position = new Vector3(transform.position.x, topConstraint + buffer, transform.position.z);
         }
-        if (transform.position.x < topConstraint + buffer)
+        if (transform.position.y > topConstraint + buffer)
         {
             transform.position = new Vector3(transform.position.x, bottomConstraint - buffer, transform.position.z);
         }

@@ -12,9 +12,13 @@ public class PlayerControls : MonoBehaviour
     private bool isjumping;
 
     private Rigidbody2D rb;
+    SpriteRenderer spriteRenderer;
+    Animator animator;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
     void Update()
     {
@@ -23,11 +27,23 @@ public class PlayerControls : MonoBehaviour
         //This will make it so that unless both of the requirements have been met then the code below won't function.
         if (Input.GetButtonDown("Jump") && !isjumping)
         {
+            animator.SetBool("IsJumping?", true);
             rb.AddForce(new Vector2(rb.velocity.x, jump));
             isjumping = true;
             //Will find the audio and play the sound that has that name attached to it.
             FindObjectOfType<AudioManager>().Play("PlayerJump");
+            
         }
+
+        if (move > 0)
+        {
+            spriteRenderer.flipX = false;
+        }
+        if (move < 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
 
 
     }
@@ -38,6 +54,7 @@ public class PlayerControls : MonoBehaviour
         {
             //This will set it so that when the player touches anything with the ground tag they will be allowed to jump again.
             isjumping = false;
+            animator.SetBool("IsJumping?", false);
         }
     }
 }

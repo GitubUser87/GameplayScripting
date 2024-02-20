@@ -10,6 +10,7 @@ public class ObstacleDeletion : MonoBehaviour
         {
             //This will check to see if the asteroid has hit the kill line and delete it. This is done to prevent them falling endlessly.
             Destroy(other.gameObject);
+            FindObjectOfType<AudioManager>().Play("AsteroidDeletion");
         }
     }
 }

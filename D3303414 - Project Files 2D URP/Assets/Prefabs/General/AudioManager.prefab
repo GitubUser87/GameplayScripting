@@ -80,3 +80,8 @@ MonoBehaviour:
     volume: 1
     pitch: 3
     source: {fileID: 0}
+  - name: AsteroidDeletion
+    clip: {fileID: 8300000, guid: a65924dbd81fa184a86a1bde64c65d62, type: 3}
+    volume: 1
+    pitch: 3
+    source: {fileID: 0}

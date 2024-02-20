@@ -12,8 +12,10 @@ public class ScreenWrapForAsteroids : MonoBehaviour
     float buffer = 1.0f;
     Camera cam;
     float distanceZ;
+    TrailRenderer trail;
     void Start()
     {
+        trail = GetComponent<TrailRenderer>();
         //This will allow the Asteroids in level 2 to stay on screen and float around the level.
         cam = Camera.main;
         distanceZ = Mathf.Abs(cam.transform.position.z + transform.position.z);
@@ -26,21 +28,38 @@ public class ScreenWrapForAsteroids : MonoBehaviour
 
     void Update()
     {
+
         if (transform.position.x < leftConstraint - buffer)
         {
             transform.position = new Vector3(rightConstraint - 0.10f, transform.position.y, transform.position.z);
+            if (trail != null)
+            {
+            trail.Clear();
+            }
         }
         if (transform.position.x > rightConstraint)
         {
             transform.position = new Vector3(leftConstraint, transform.position.y, transform.position.z);
+            if (trail != null)
+            {
+                trail.Clear();
+            }
         }
         if (transform.position.y < bottomConstraint - buffer)
         {
             transform.position = new Vector3(transform.position.x, topConstraint + buffer, transform.position.z);
+            if (trail != null)
+            {
+                trail.Clear();
+            }
         }
         if (transform.position.y > topConstraint + buffer)
         {
             transform.position = new Vector3(transform.position.x, bottomConstraint - buffer, transform.position.z);
+            if (trail != null)
+            {
+                trail.Clear();
+            }
         }
     }
 }

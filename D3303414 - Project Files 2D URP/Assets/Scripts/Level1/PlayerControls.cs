@@ -31,8 +31,7 @@ public class PlayerControls : MonoBehaviour
             rb.AddForce(new Vector2(rb.velocity.x, jump));
             isjumping = true;
             //Will find the audio and play the sound that has that name attached to it.
-            FindObjectOfType<AudioManager>().Play("PlayerJump");
-            
+            FindObjectOfType<AudioManager>().Play("PlayerJump");   
         }
 
         if (move > 0)
@@ -52,9 +51,17 @@ public class PlayerControls : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ground"))
         {
-            //This will set it so that when the player touches anything with the ground tag they will be allowed to jump again.
-            isjumping = false;
-            animator.SetBool("IsJumping?", false);
+            foreach (var contact in other.contacts) 
+            {
+                if (contact.normal.y >0.7f)
+                {
+                //This will set it so that when the player touches anything with the ground tag they will be allowed to jump again.
+                isjumping = false;
+                animator.SetBool("IsJumping?", false);
+
+                }
+            }
+            
         }
     }
 }

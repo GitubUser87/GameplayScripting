@@ -4,7 +4,8 @@ using UnityEngine;
 public class PlayerLives : MonoBehaviour
 {
     public float lives = 3;
-    public Vector3 respawnPosition; 
+    public Vector3 respawnPosition;
+    TrailRenderer trail;
     public void Hit()
     {
         lives--;
@@ -14,6 +15,10 @@ public class PlayerLives : MonoBehaviour
         }
         else
         {
+            if (trail != null)
+            {
+                trail.Clear();
+            }
             transform.position = respawnPosition;
         }
     }

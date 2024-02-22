@@ -23,4 +23,9 @@ public class PlayerLives : MonoBehaviour
         }
     }
 
+    public void Heal()
+    {
+       lives = lives + 1;
+    }
+
 }

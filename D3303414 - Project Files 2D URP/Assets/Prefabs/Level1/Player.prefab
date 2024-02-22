@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6555811192254856674}
   - component: {fileID: 4156595617926317124}
   - component: {fileID: 3798929742901472371}
+  - component: {fileID: 7854258252259483842}
   - component: {fileID: 6807504670356158115}
-  - component: {fileID: 6714168098267804768}
   - component: {fileID: -6832212160873334873}
   - component: {fileID: 5144753812769616617}
   - component: {fileID: -4760791684477370005}
@@ -117,23 +117,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &6807504670356158115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4458297101361889124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d1fd688ef4843c4ba2fdac7726f85cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  move: 0
-  speed: 5
-  jump: 750
---- !u!61 &6714168098267804768
-BoxCollider2D:
+--- !u!70 &7854258252259483842
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -164,19 +149,24 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.004182577, y: -0.11025095}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.96, y: 0.96}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5398555, y: 0.73504543}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.96, y: 0.76}
+  m_Direction: 0
+--- !u!114 &6807504670356158115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4458297101361889124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1fd688ef4843c4ba2fdac7726f85cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  move: 0
+  speed: 5
+  jump: 750
 --- !u!82 &-6832212160873334873
 AudioSource:
   m_ObjectHideFlags: 0
@@ -307,4 +297,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 3
-  respawnPosition: {x: 0, y: 0, z: 0}
+  respawnPosition: {x: -7.89, y: -3.48, z: 0}

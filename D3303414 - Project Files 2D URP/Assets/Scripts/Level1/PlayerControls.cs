@@ -53,6 +53,7 @@ public class PlayerControls : MonoBehaviour
         {
             foreach (var contact in other.contacts) 
             {
+                //This will make it so that the contact point wasn't greater than 0.7.
                 if (contact.normal.y >0.7f)
                 {
                 //This will set it so that when the player touches anything with the ground tag they will be allowed to jump again.

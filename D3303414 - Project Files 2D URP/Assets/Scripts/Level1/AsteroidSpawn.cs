@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class AsteroidSpawn : MonoBehaviour
 {
-    
-    void Start()
-    {
-        
-    }
-
+    public GameObject Asteroid;
+    public float TimeBetweenSpawn;
+    private float spawnTime;
     
     void Update()
     {
-        
+        if (Time.time > spawnTime)
+        {
+            Spawn();
+            spawnTime = Time.time + TimeBetweenSpawn;
+        }
+    }
+
+    void Spawn()
+    {
+        Instantiate(Asteroid, transform.position, transform.rotation);
     }
 }

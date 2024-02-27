@@ -33,4 +33,9 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(sceneID);
         //This will load up the scene ID that has been entered.
     }
+
+    public void ChangeVolume (float volume)
+    {
+        AudioListener.volume = volume;
+    }
 }

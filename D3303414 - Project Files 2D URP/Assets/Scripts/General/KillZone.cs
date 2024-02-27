@@ -17,6 +17,10 @@ public class KillZone : MonoBehaviour
                 playerlives.Hit();
                 
             }
+            else
+            {
+                Destroy(other);
+            }
 
         }
     }

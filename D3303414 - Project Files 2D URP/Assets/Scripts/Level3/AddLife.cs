@@ -15,6 +15,7 @@ public class AddLife : MonoBehaviour
         {
             if (other.TryGetComponent<PlayerLives>(out PlayerLives playerlives))
             {
+                FindObjectOfType<AudioManager>().Play("HealthPickup");
                 playerlives.Heal();
                 Destroy(gameObject);
             }

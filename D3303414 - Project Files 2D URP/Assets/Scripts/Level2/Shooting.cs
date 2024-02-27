@@ -7,16 +7,21 @@ public class Shooting : MonoBehaviour
     public Transform bulletSpawnPoint;
     public GameObject bulletPrefab;
     public float bulletSpeed = 10;
+    public float fireRate = 0.2f;
+    float lastShotTime = 0;
  
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButton("Fire1"))
         {
-            //This will spawn in a new bullet everytime the command is initiated.
-            var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
-            bullet.GetComponent<Rigidbody2D>().velocity = bulletSpawnPoint.up * bulletSpeed;
-
-            FindObjectOfType<AudioManager>().Play("PlayerShoot");
+            if (Time.time > lastShotTime + fireRate)
+            {
+                //This will spawn in a new bullet everytime the command is initiated.
+                var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+                bullet.GetComponent<Rigidbody2D>().velocity = bulletSpawnPoint.up * bulletSpeed;
+                lastShotTime = Time.time;
+                FindObjectOfType<AudioManager>().Play("PlayerShoot");
+            }
         }
     }
 }

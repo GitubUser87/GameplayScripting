@@ -545,6 +545,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4874507266213768023, guid: 7c1deddef3bf0bc4bb12ef16fbd997c2, type: 3}
+      propertyPath: sounds.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874507266213768023, guid: 7c1deddef3bf0bc4bb12ef16fbd997c2, type: 3}
+      propertyPath: sounds.Array.data[8].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1ac1dc5b3d7e6db4f9bb64a66459560c, type: 3}
+    - target: {fileID: 4874507266213768023, guid: 7c1deddef3bf0bc4bb12ef16fbd997c2, type: 3}
+      propertyPath: sounds.Array.data[8].name
+      value: HealthPickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874507266213768023, guid: 7c1deddef3bf0bc4bb12ef16fbd997c2, type: 3}
+      propertyPath: sounds.Array.data[8].pitch
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874507266213768023, guid: 7c1deddef3bf0bc4bb12ef16fbd997c2, type: 3}
+      propertyPath: sounds.Array.data[8].volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5943538599485759390, guid: 7c1deddef3bf0bc4bb12ef16fbd997c2, type: 3}
       propertyPath: m_Name
       value: AudioManager
@@ -1074,7 +1094,7 @@ GameObject:
   - component: {fileID: 1679841109}
   - component: {fileID: 1679841108}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

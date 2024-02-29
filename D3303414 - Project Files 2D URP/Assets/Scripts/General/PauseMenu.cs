@@ -25,6 +25,11 @@ public class PauseMenu : MonoBehaviour
         //This will set the game back into motion.
     }
 
+    public void Sound()
+    {
+        FindObjectOfType<AudioManager>().Play("MenuSound");
+    }
+
     public void Quit(int sceneID)
     {
         //Will find the audio and play the sound that has that name attached to it.

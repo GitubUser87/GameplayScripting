@@ -33,4 +33,9 @@ public class MainMenuFunction : MonoBehaviour
         //This code is designed to quit the project.
         Application.Quit();
     }
+
+    public void Sound()
+    {
+        FindObjectOfType<AudioManager>().Play("SettingsMenu");
+    }
 }

@@ -8,4 +8,9 @@ public class SettingsControls : MonoBehaviour
     {
         AudioListener.volume = volume;
     }
+
+    public void Sound()
+    {
+        FindObjectOfType<AudioManager>().Play("SettingsMenu");
+    }
 }

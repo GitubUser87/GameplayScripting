@@ -4,14 +4,18 @@ using UnityEngine;
 public class PlayerLives : MonoBehaviour
 {
     public float lives = 3;
+    public bool hasShield = false;
     public float duration = 2;
     public Vector3 respawnPosition;
     TrailRenderer trail;
     SpriteRenderer spriteRenderer;
+    Collider2D collider;
 
     private void Awake()
     {
+        trail = GetComponent<TrailRenderer>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        collider = GetComponent<Collider2D>();
     }
     public void Hit()
     {
@@ -24,18 +28,31 @@ public class PlayerLives : MonoBehaviour
         {
             if (trail != null)
             {
-                trail.Clear();
+                trail.enabled = false;
             }
-            spriteRenderer.enabled = false;
-            //yield return new WaitForSeconds(duration);
+            
+            collider.enabled = false;
+            Invoke("Reappear", 2);
             transform.position = respawnPosition;
-            spriteRenderer.enabled = true;
+           
         }
     }
 
     public void Heal()
     {
        lives = lives + 1;
+    }
+
+    void Reappear()
+    {
+        if (trail != null)
+        {
+            trail.enabled = true;
+            trail.Clear();
+        }
+        
+        collider.enabled = true;
+ 
     }
 
 }

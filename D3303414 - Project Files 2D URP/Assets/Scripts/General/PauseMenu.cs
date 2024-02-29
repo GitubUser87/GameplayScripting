@@ -27,7 +27,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Sound()
     {
-        FindObjectOfType<AudioManager>().Play("MenuSound");
+        FindObjectOfType<AudioManager>().Play("SettingsMenu");
     }
 
     public void Quit(int sceneID)

@@ -85,3 +85,13 @@ MonoBehaviour:
     volume: 1
     pitch: 3
     source: {fileID: 0}
+  - name: GameOver
+    clip: {fileID: 8300000, guid: ff109254cc4ef6647af87177172d8a45, type: 3}
+    volume: 1
+    pitch: 3
+    source: {fileID: 0}
+  - name: SettingsMenu
+    clip: {fileID: 8300000, guid: dcf55f2ba352de049baa7925728a1d7e, type: 3}
+    volume: 1
+    pitch: 3
+    source: {fileID: 0}

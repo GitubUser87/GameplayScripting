@@ -49,49 +49,65 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 2acb500892ba94349a746bafe6ba5001, type: 3}
     volume: 1
     pitch: 3
+    loop: 0
     source: {fileID: 0}
   - name: PlayerJump
     clip: {fileID: 8300000, guid: fda8ee984f23cb44fa059bf6d41810bd, type: 3}
     volume: 1
     pitch: 3
+    loop: 0
     source: {fileID: 0}
   - name: AsteroidDestruction
     clip: {fileID: 8300000, guid: 7efb418262fe8dd47afb8415f8512508, type: 3}
     volume: 1
     pitch: 3
+    loop: 0
     source: {fileID: 0}
   - name: DashSound
     clip: {fileID: 8300000, guid: 0f6e7a6734e2abb418d9bf9f28a0e5b1, type: 3}
     volume: 1
     pitch: 3
+    loop: 0
     source: {fileID: 0}
   - name: ButtonSound
     clip: {fileID: 8300000, guid: dbe960ce165b44445a4e1f4124ee21c7, type: 3}
     volume: 1
     pitch: 3
+    loop: 0
     source: {fileID: 0}
   - name: MenuSound
     clip: {fileID: 8300000, guid: 3604224eee574914a87fdf3afd9b60bf, type: 3}
     volume: 1
     pitch: 3
+    loop: 0
     source: {fileID: 0}
   - name: DeathSound
     clip: {fileID: 8300000, guid: ff109254cc4ef6647af87177172d8a45, type: 3}
     volume: 1
     pitch: 3
+    loop: 0
     source: {fileID: 0}
   - name: AsteroidDeletion
     clip: {fileID: 8300000, guid: a65924dbd81fa184a86a1bde64c65d62, type: 3}
     volume: 1
     pitch: 3
+    loop: 0
     source: {fileID: 0}
   - name: GameOver
     clip: {fileID: 8300000, guid: ff109254cc4ef6647af87177172d8a45, type: 3}
     volume: 1
     pitch: 3
+    loop: 0
     source: {fileID: 0}
   - name: SettingsMenu
     clip: {fileID: 8300000, guid: dcf55f2ba352de049baa7925728a1d7e, type: 3}
     volume: 1
     pitch: 3
+    loop: 0
+    source: {fileID: 0}
+  - name: SpaceshipSound
+    clip: {fileID: 8300000, guid: b738af6128745634b86838eac2e2e8f9, type: 3}
+    volume: 1
+    pitch: 3
+    loop: 1
     source: {fileID: 0}

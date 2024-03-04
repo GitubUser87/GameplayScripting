@@ -26,6 +26,7 @@ public class AudioManager : MonoBehaviour
 
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
+            s.source.loop = s.loop;
             //This will find the source of all the sounds located in the file.
         }
     }
@@ -34,6 +35,12 @@ public class AudioManager : MonoBehaviour
     public void Play (string name)
     {
        ShootingSound s =  Array.Find(sounds, sound  => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found.");
+            return;
+        }
+            
         s.source.Play();
        
     }

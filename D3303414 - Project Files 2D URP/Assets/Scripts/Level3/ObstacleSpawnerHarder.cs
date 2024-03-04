@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObstacleSpawner : MonoBehaviour
+public class ObstacleSpawnerHarder : MonoBehaviour
 {
- 
+
     public GameObject Obstacle;
     public float maxX;
     public float minX;
@@ -13,8 +13,10 @@ public class ObstacleSpawner : MonoBehaviour
     public float TimeBetweenSpawn;
     private float SpawnTime;
 
-   
-
+    private void Start()
+    {
+        Invoke("Update", 2);
+    }
     private void Update()
     {
         if (Time.time > SpawnTime)

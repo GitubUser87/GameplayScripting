@@ -1422,11 +1422,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2acb500892ba94349a746bafe6ba5001, type: 3}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: b738af6128745634b86838eac2e2e8f9, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1521,6 +1521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 3
+  hasShield: 0
   duration: 2
   respawnPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &2015092185
@@ -1890,6 +1891,14 @@ PrefabInstance:
     - target: {fileID: 2439255906039931996, guid: 7c1deddef3bf0bc4bb12ef16fbd997c2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874507266213768023, guid: 7c1deddef3bf0bc4bb12ef16fbd997c2, type: 3}
+      propertyPath: sounds.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874507266213768023, guid: 7c1deddef3bf0bc4bb12ef16fbd997c2, type: 3}
+      propertyPath: sounds.Array.data[10].loop
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5943538599485759390, guid: 7c1deddef3bf0bc4bb12ef16fbd997c2, type: 3}
       propertyPath: m_Name

@@ -20,8 +20,10 @@ public class ShieldOnPlayer : MonoBehaviour
         {
             if (player.TryGetComponent<PlayerLives>(out PlayerLives playerlives))
             {
-                playerlives.hasShield = false;
                 Destroy(gameObject);
+                playerlives.hasShield = false;
+                
+                
             }
 
         }

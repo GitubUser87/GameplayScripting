@@ -10,7 +10,7 @@ public class Shield : MonoBehaviour
     {
         if (equipped == false)
         {
-            Destroy(gameObject, 5);
+            Destroy(gameObject, 4);
         }
 
     }

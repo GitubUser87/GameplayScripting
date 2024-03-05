@@ -93,21 +93,15 @@ MonoBehaviour:
     pitch: 3
     loop: 0
     source: {fileID: 0}
-  - name: GameOver
-    clip: {fileID: 8300000, guid: ff109254cc4ef6647af87177172d8a45, type: 3}
+  - name: HealthPickup
+    clip: {fileID: 8300000, guid: 1ac1dc5b3d7e6db4f9bb64a66459560c, type: 3}
     volume: 1
     pitch: 3
     loop: 0
     source: {fileID: 0}
-  - name: SettingsMenu
-    clip: {fileID: 8300000, guid: dcf55f2ba352de049baa7925728a1d7e, type: 3}
+  - name: PointsEarned
+    clip: {fileID: 8300000, guid: 62c8adee5812ec7469bf90636026e1d9, type: 3}
     volume: 1
     pitch: 3
     loop: 0
-    source: {fileID: 0}
-  - name: SpaceshipSound
-    clip: {fileID: 8300000, guid: b738af6128745634b86838eac2e2e8f9, type: 3}
-    volume: 1
-    pitch: 3
-    loop: 1
     source: {fileID: 0}

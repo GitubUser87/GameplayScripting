@@ -7,7 +7,7 @@ public class Points : MonoBehaviour
     public int value;
     void Start()
     {
-        
+        Destroy(gameObject, 5);
     }
 
     void Update()
@@ -19,6 +19,7 @@ public class Points : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("PointsEarned");
             Destroy(gameObject);
             PointsCounter.Instance.IncreasePoints(value);
         }

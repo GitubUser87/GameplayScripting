@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerLives : MonoBehaviour
 {
@@ -10,9 +11,11 @@ public class PlayerLives : MonoBehaviour
     TrailRenderer trail;
     SpriteRenderer spriteRenderer;
     Collider2D collider;
+    
 
     private void Awake()
     {
+        
         trail = GetComponent<TrailRenderer>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         collider = GetComponent<Collider2D>();

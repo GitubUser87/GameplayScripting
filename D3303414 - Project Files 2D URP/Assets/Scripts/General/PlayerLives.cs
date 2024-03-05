@@ -11,51 +11,52 @@ public class PlayerLives : MonoBehaviour
     TrailRenderer trail;
     SpriteRenderer spriteRenderer;
     Collider2D collider;
-    
+
+
 
     private void Awake()
     {
-        
+
         trail = GetComponent<TrailRenderer>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         collider = GetComponent<Collider2D>();
     }
-    public void Hit()
-    {
-        lives--;
-        if (lives == 0)
+        public void Hit()
         {
-            Destroy(gameObject);
+            lives--;
+            if (lives == 0)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                if (trail != null)
+                {
+                    trail.enabled = false;
+                }
+               
+                collider.enabled = false;
+                Invoke("Reappear", 2);
+            transform.position = respawnPosition;
+
         }
-        else
+        }
+
+        public void Heal()
+        {
+            lives = lives + 1;
+        }
+
+        void Reappear()
         {
             if (trail != null)
             {
-                trail.enabled = false;
+                trail.enabled = true;
+                trail.Clear();
             }
             
-            collider.enabled = false;
-            Invoke("Reappear", 2);
-            transform.position = respawnPosition;
-           
+            collider.enabled = true;
+
         }
-    }
-
-    public void Heal()
-    {
-       lives = lives + 1;
-    }
-
-    void Reappear()
-    {
-        if (trail != null)
-        {
-            trail.enabled = true;
-            trail.Clear();
-        }
-        
-        collider.enabled = true;
- 
-    }
-
+    
 }

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class AddLife : MonoBehaviour
 {
-
+    public int destruction;
     private void Start()
     {
-        Destroy(gameObject, 3);
+        Destroy(gameObject, destruction);
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

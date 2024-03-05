@@ -12,7 +12,7 @@ public class KillZone : MonoBehaviour
             
             //Will find the audio and play the sound that has that name attached to it.
             FindObjectOfType<AudioManager>().Play("DeathSound");
-            if (other.TryGetComponent<PlayerLives>(out PlayerLives playerlives))
+            if (other.TryGetComponent<PlayerLivesLevel1>(out PlayerLivesLevel1 playerlives))
             {
                 playerlives.Hit();
                 

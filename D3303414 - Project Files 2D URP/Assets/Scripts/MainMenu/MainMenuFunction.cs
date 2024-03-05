@@ -36,6 +36,6 @@ public class MainMenuFunction : MonoBehaviour
 
     public void Sound()
     {
-        FindObjectOfType<AudioManager>().Play("SettingsMenu");
+        FindObjectOfType<AudioManager>().Play("MenuSound");
     }
 }

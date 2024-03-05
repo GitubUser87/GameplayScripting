@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6807504670356158115}
   - component: {fileID: -6832212160873334873}
   - component: {fileID: 5144753812769616617}
-  - component: {fileID: -4760791684477370005}
+  - component: {fileID: 6703301069331388418}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -36,7 +36,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4156595617926317124
 SpriteRenderer:
@@ -284,7 +284,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-4760791684477370005
+--- !u!114 &6703301069331388418
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -293,9 +293,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4458297101361889124}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae157c3aacc2e8a46a2b4bde496a2280, type: 3}
+  m_Script: {fileID: 11500000, guid: 1706bcbd9c2ffef40aa4e06d8d5c7c74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 3
+  hasShield: 0
   duration: 2
-  respawnPosition: {x: -4.61, y: 2.41, z: 0}
+  respawnPosition: {x: 0, y: 0, z: 0}

@@ -14,6 +14,7 @@ public class MovingPlatform : MonoBehaviour
     private void Start()
     {
         targetPos = endPoint.position;
+        //This will set where the platform is set to move.
     }
 
     private void Update()

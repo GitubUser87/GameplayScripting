@@ -14,11 +14,13 @@ public class AsteroidSpawn : MonoBehaviour
         {
             Spawn();
             spawnTime = Time.time + TimeBetweenSpawn;
+            //This will call the spawn function as well as make it so that the spawn time resets.
         }
     }
 
     void Spawn()
     {
         Instantiate(Asteroid, transform.position, transform.rotation);
+        //This will create a new asteroid.
     }
 }

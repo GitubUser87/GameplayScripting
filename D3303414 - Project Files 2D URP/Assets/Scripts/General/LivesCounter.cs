@@ -17,6 +17,7 @@ public class LivesCounter : MonoBehaviour
     }
     void Start()
     {
+        //This will find the player lives and the store that as a variable.
         playerlives = FindFirstObjectByType<PlayerLives>();
         
     }
@@ -24,6 +25,7 @@ public class LivesCounter : MonoBehaviour
    
     void Update()
     {
+        //This will present the player's lives as a text string.
         livesText.text = "Lives: " + playerlives.lives.ToString();
     }
 }

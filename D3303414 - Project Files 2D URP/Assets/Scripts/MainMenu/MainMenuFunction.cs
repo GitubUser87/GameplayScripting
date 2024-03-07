@@ -36,6 +36,7 @@ public class MainMenuFunction : MonoBehaviour
 
     public void Sound()
     {
+        //This will play the sound selected.
         FindObjectOfType<AudioManager>().Play("MenuSound");
     }
 }

@@ -27,6 +27,7 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
+            //the loop will allow an audio source to play repeatedly once it ends.
             //This will find the source of all the sounds located in the file.
         }
     }
@@ -39,6 +40,7 @@ public class AudioManager : MonoBehaviour
         {
             Debug.LogWarning("Sound: " + name + " not found.");
             return;
+            //This will detect if the auido isn't available and will send a message through the console.
         }
             
         s.source.Play();

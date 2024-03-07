@@ -27,7 +27,8 @@ public class PauseMenu : MonoBehaviour
 
     public void Sound()
     {
-        FindObjectOfType<AudioManager>().Play("SettingsMenu");
+        //This will play the selected audio.
+        FindObjectOfType<AudioManager>().Play("MenuSound");
     }
 
     public void Quit(int sceneID)
@@ -41,6 +42,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ChangeVolume (float volume)
     {
+        //This will allow the slider to change the volume of the game.
         AudioListener.volume = volume;
     }
 }

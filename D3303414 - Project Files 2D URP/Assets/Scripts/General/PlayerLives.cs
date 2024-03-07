@@ -33,6 +33,7 @@ public class PlayerLives : MonoBehaviour
                 if (trail != null)
                 {
                     trail.enabled = false;
+                //This will disable the trail renderer if there is one detected. 
                 }
                
                 collider.enabled = false;
@@ -45,6 +46,7 @@ public class PlayerLives : MonoBehaviour
         public void Heal()
         {
             lives = lives + 1;
+        //This will add one life when called for.
         }
 
         void Reappear()
@@ -53,6 +55,8 @@ public class PlayerLives : MonoBehaviour
             {
                 trail.enabled = true;
                 trail.Clear();
+            //This will renable the trail renderer.
+            //The clear function will make t so that it doesn't snap to the player's position
             }
             
             collider.enabled = true;

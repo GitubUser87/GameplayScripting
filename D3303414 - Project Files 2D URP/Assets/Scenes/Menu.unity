@@ -1038,7 +1038,7 @@ GameObject:
   - component: {fileID: 438224063}
   - component: {fileID: 438224062}
   m_Layer: 0
-  m_Name: TemporaryBackground
+  m_Name: Backerground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -42,6 +42,7 @@ public class PlayerControls : MonoBehaviour
         {
             spriteRenderer.flipX = true;
         }
+        //This will flip the sprite depending on which direction the player is moving.
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
 
 

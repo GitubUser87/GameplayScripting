@@ -11,7 +11,7 @@ public class PlayerLives : MonoBehaviour
     TrailRenderer trail;
     SpriteRenderer spriteRenderer;
     Collider2D collider;
-
+    public GameObject shield;
 
 
     private void Awake()
@@ -38,6 +38,8 @@ public class PlayerLives : MonoBehaviour
                
                 collider.enabled = false;
                 Invoke("Reappear", 2);
+            var s = Instantiate(shield);
+            Destroy(s, 2);
             transform.position = respawnPosition;
 
         }
@@ -56,8 +58,9 @@ public class PlayerLives : MonoBehaviour
                 trail.enabled = true;
                 trail.Clear();
             //This will renable the trail renderer.
-            //The clear function will make t so that it doesn't snap to the player's position
+            //The clear function will make it so that it doesn't snap to the player's position
             }
+            
             
             collider.enabled = true;
 

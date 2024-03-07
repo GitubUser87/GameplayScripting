@@ -1288,6 +1288,7 @@ MonoBehaviour:
   hasShield: 0
   duration: 2
   respawnPosition: {x: 0, y: 0, z: 0}
+  shield: {fileID: 7456051445107082592, guid: 465d147b3a825f64c827de7145be8189, type: 3}
 --- !u!114 &2015092185
 MonoBehaviour:
   m_ObjectHideFlags: 0

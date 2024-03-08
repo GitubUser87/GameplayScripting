@@ -52,17 +52,17 @@ public class PlayerControls : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ground"))
         {
-            foreach (var contact in other.contacts) 
-            {
+           foreach (var contact in other.contacts) 
+           {
                 //This will make it so that the contact point wasn't greater than 0.7.
-                if (contact.normal.y >0.7f)
-                {
+              if (contact.normal.y >0.7f)
+              {
                 //This will set it so that when the player touches anything with the ground tag they will be allowed to jump again.
                 isjumping = false;
                 animator.SetBool("IsJumping?", false);
 
-                }
-            }
+              }
+           }
             
         }
     }

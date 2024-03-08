@@ -988,7 +988,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -427, y: 151}
+  m_AnchoredPosition: {x: -853, y: 392}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &314155274
@@ -1147,10 +1147,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1822,7 +1822,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -427, y: 251}
+  m_AnchoredPosition: {x: -853, y: 492}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1582476683
@@ -2531,6 +2531,7 @@ MonoBehaviour:
   hasShield: 0
   duration: 2
   respawnPosition: {x: 0, y: -3.4, z: 0}
+  shield: {fileID: 7456051445107082592, guid: 465d147b3a825f64c827de7145be8189, type: 3}
 --- !u!1001 &2105219462
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2549,6 +2550,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1657633652354690824, guid: 2de9c7a69885e3249a0585109ae1f4f1, type: 3}
       propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940245369912084927, guid: 2de9c7a69885e3249a0585109ae1f4f1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877031147058943770, guid: 2de9c7a69885e3249a0585109ae1f4f1, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3965810080326273765, guid: 2de9c7a69885e3249a0585109ae1f4f1, type: 3}
@@ -2786,6 +2795,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LivesText
       objectReference: {fileID: 0}
+    - target: {fileID: 4136771443140935222, guid: 3b95308bf70cdf545a6fd0e9f32da078, type: 3}
+      propertyPath: m_margin.z
+      value: -47.488876
+      objectReference: {fileID: 0}
     - target: {fileID: 4490877732264227199, guid: 3b95308bf70cdf545a6fd0e9f32da078, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2852,11 +2865,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4490877732264227199, guid: 3b95308bf70cdf545a6fd0e9f32da078, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -427
+      value: -853
       objectReference: {fileID: 0}
     - target: {fileID: 4490877732264227199, guid: 3b95308bf70cdf545a6fd0e9f32da078, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 201
+      value: 442
       objectReference: {fileID: 0}
     - target: {fileID: 4490877732264227199, guid: 3b95308bf70cdf545a6fd0e9f32da078, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

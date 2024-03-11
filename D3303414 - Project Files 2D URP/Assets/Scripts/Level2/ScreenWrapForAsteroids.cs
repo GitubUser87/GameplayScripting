@@ -34,7 +34,7 @@ public class ScreenWrapForAsteroids : MonoBehaviour
             transform.position = new Vector3(rightConstraint - 0.10f, transform.position.y, transform.position.z);
             if (trail != null)
             {
-            trail.Clear();
+                trail.Clear();
             }
         }
         if (transform.position.x > rightConstraint)

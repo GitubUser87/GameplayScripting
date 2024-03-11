@@ -8,8 +8,8 @@ public class Shield : MonoBehaviour
     bool equipped = false;
     private void Start()
     {
-       if (equipped == false)
-       {
+        if (equipped == false)
+        {
             Destroy(gameObject, 4);
         }
 

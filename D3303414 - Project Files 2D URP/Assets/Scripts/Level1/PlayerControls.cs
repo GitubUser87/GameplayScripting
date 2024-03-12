@@ -44,7 +44,7 @@ public class PlayerControls : MonoBehaviour
         }
         //This will flip the sprite depending on which direction the player is moving.
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetButtonDown("Pause"))
         {
             Pause.SetActive(true);
             Time.timeScale = 0f;

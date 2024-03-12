@@ -12,7 +12,7 @@ public class PlayerLives : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Collider2D collider;
     public GameObject shield;
-
+    public GameObject GameOver;
 
     private void Awake()
     {
@@ -27,7 +27,9 @@ public class PlayerLives : MonoBehaviour
             if (lives == 0)
             {
                 Destroy(gameObject);
-            }
+            Time.timeScale = 0f;
+            GameOver.SetActive(true);
+        }
             else
             {
                 if (trail != null)

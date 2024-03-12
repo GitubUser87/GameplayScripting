@@ -12,7 +12,7 @@ public class PlayerLivesLevel1 : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Collider2D collider;
     Rigidbody2D rigid;
-
+    public GameObject GameOver;
 
     private void Awake()
     {
@@ -28,6 +28,8 @@ public class PlayerLivesLevel1 : MonoBehaviour
         if (lives == 0)
         {
             Destroy(gameObject);
+            Time.timeScale = 0f;
+            GameOver.SetActive(true);
         }
         else
         {

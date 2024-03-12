@@ -6,10 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class GameOverScreen : MonoBehaviour
 {
+    public string Level;
+    public static GameOverScreen Instance;
 
-public void Restart()
+    private void Start()
     {
-        SceneManager.LoadScene("Menu");
+        Instance = this;
+        gameObject.SetActive(false);
+    }
+    public void Restart()
+    {
+        SceneManager.LoadScene(Level);
+        Time.timeScale = 1f;
     }
     public void MainMenu()
     {

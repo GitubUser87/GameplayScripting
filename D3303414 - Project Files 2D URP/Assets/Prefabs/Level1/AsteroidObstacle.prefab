@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 122171682576610326}
   - component: {fileID: 7144574460706290457}
   - component: {fileID: 3780388797695098675}
-  - component: {fileID: 3864970673469088088}
   - component: {fileID: 2388483776932087481}
+  - component: {fileID: -4472152925026599227}
   m_Layer: 0
   m_Name: AsteroidObstacle
   m_TagString: Asteroid
@@ -122,18 +122,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.445
---- !u!114 &3864970673469088088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4632973890631413266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5216e40505f63f41ab3ead6b3c65de6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &2388483776932087481
 Rigidbody2D:
   serializedVersion: 4
@@ -161,3 +149,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-4472152925026599227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4632973890631413266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f78e0e5d707880e4c9c061ca37045332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameOver: {fileID: 0}

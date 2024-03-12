@@ -27,7 +27,7 @@ public class PlayerControls3 : MonoBehaviour
             rb.velocity = new Vector2(move * power, rb.velocity.y);
             FindObjectOfType<AudioManager>().Play("DashSound");
         }
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetButtonDown("Pause"))
         {
             Pause.SetActive(true);
             Time.timeScale = 0f;

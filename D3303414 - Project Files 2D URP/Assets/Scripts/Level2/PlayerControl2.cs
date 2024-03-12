@@ -28,7 +28,7 @@ public class PlayerControl2 : MonoBehaviour
         pos += rot * velocity;
         
         transform.position = pos;
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetButtonDown("Pause"))
         {
             Pause.SetActive(true);
             Time.timeScale = 0f;

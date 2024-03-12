@@ -975,6 +975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 5
   rotSpeed: 180
+  Pause: {fileID: 2136200433}
 --- !u!61 &2015092178
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1301,6 +1302,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d183a951a256646b2f4378d9906296, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2136200433 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9106700764784262859, guid: 2de9c7a69885e3249a0585109ae1f4f1, type: 3}
+  m_PrefabInstance: {fileID: 1840832244}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2733799173211929071
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ public class PlayerControl2 : MonoBehaviour
 
     public float maxSpeed = 5f;
     public float rotSpeed = 720f;
-
+    public GameObject Pause;
     void Update()
     {
 
@@ -28,6 +28,10 @@ public class PlayerControl2 : MonoBehaviour
         pos += rot * velocity;
         
         transform.position = pos;
-     
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Pause.SetActive(true);
+            Time.timeScale = 0f;
+        }
     }
 }

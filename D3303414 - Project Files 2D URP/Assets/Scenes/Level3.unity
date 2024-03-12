@@ -2503,6 +2503,7 @@ MonoBehaviour:
   move: 0
   power: 4
   health: 3
+  Pause: {fileID: 2105219463}
 --- !u!114 &1897507244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2661,6 +2662,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2de9c7a69885e3249a0585109ae1f4f1, type: 3}
+--- !u!1 &2105219463 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9106700764784262859, guid: 2de9c7a69885e3249a0585109ae1f4f1, type: 3}
+  m_PrefabInstance: {fileID: 2105219462}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1524687262789483378
 PrefabInstance:
   m_ObjectHideFlags: 0

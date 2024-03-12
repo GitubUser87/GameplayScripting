@@ -9,7 +9,7 @@ public class PlayerControls3 : MonoBehaviour
     public float move;
     public float power = 4f;
     public float health = 3f;
-
+    public GameObject Pause;
     private Rigidbody2D rb;
     void Start()
     {
@@ -27,8 +27,12 @@ public class PlayerControls3 : MonoBehaviour
             rb.velocity = new Vector2(move * power, rb.velocity.y);
             FindObjectOfType<AudioManager>().Play("DashSound");
         }
-   
-      
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Pause.SetActive(true);
+            Time.timeScale = 0f;
+        }
+
     }
     public void Damage()
     {

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class KillZoneLevel1 : MonoBehaviour
 {
-   [SerializeField] GameObject GameOver;
+   public GameObject GameOver;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")

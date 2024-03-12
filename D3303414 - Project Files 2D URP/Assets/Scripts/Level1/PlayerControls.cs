@@ -6,7 +6,7 @@ public class PlayerControls : MonoBehaviour
 {
     public float move;
     public float speed;
-
+    public GameObject Pause;
     public float jump;
 
     private bool isjumping;
@@ -44,7 +44,11 @@ public class PlayerControls : MonoBehaviour
         }
         //This will flip the sprite depending on which direction the player is moving.
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
-
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Pause.SetActive(true);
+            Time.timeScale = 0f;
+        }
 
     }
     //Will make sure the player can't jump unless they have touched the ground again.

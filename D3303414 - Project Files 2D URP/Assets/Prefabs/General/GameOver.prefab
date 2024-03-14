@@ -113,7 +113,7 @@ RectTransform:
   - {fileID: 7924692980445998432}
   - {fileID: 5965465055409231581}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -195,6 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 128156dc9ff3d9a46a2e1b13f8ff1b07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Level: 
 --- !u!1 &5437363033067863326
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,8 +540,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190335
+  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

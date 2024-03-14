@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Follow: {fileID: 2115558121}
   m_Lens:
     FieldOfView: 34
-    OrthographicSize: 5
+    OrthographicSize: 6
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -367,7 +367,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1977,7 +1977,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.05796337}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1988,7 +1988,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.88407326}
   m_EdgeRadius: 0
 --- !u!114 &1264379419
 MonoBehaviour:
@@ -2005,7 +2005,7 @@ MonoBehaviour:
   platform: {fileID: 1264379415}
   startPoint: {fileID: 1089235934}
   endPoint: {fileID: 590558456}
-  Speed: 2
+  Speed: 1
 --- !u!95 &1264379420
 Animator:
   serializedVersion: 5

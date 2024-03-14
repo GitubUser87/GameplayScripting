@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
 {
+   
+
     public float move;
     public float speed;
     public GameObject Pause;
     public float jump;
 
     private bool isjumping;
-
+    private float coyoteTime = 0.2f;
+    private float coyoteTimeCounter;
     private Rigidbody2D rb;
     SpriteRenderer spriteRenderer;
     Animator animator;
@@ -66,6 +69,7 @@ public class PlayerControls : MonoBehaviour
                 animator.SetBool("IsJumping?", false);
 
             }
+                
         }
             
         }

@@ -11,7 +11,9 @@ public class SpawnSmallerAsteroid : MonoBehaviour
     {
         if (other.tag == "Bullet")
         {
-            Instantiate(Smallerasteroid);
+            Instantiate(Smallerasteroid, transform.position, transform.rotation);
+            Instantiate(Smallerasteroid, transform.position, transform.rotation);
+            Instantiate(Smallerasteroid, transform.position, transform.rotation);
         }
     }
 }

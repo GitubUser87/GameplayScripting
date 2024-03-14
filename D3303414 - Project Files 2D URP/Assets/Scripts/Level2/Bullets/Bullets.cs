@@ -19,5 +19,10 @@ public class Bullets : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
+
+        if (other.tag == "Asteroid")
+        {
+            Destroy(gameObject);
+        }
     }
 }

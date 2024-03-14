@@ -28,13 +28,11 @@ public class PlayerControls : MonoBehaviour
         move = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(move * speed, rb.velocity.y);
         //This will make it so that unless both of the requirements have been met then the code below won't function.
-        if (Input.GetButtonDown("Jump") && !isjumping)
+        if (Input.GetButtonDown("Jump") && coyoteTimeCounter > 0)
         {
-            animator.SetBool("IsJumping?", true);
-            rb.AddForce(new Vector2(rb.velocity.x, jump));
+           
             isjumping = true;
-            //Will find the audio and play the sound that has that name attached to it.
-            FindObjectOfType<AudioManager>().Play("PlayerJump");   
+            
         }
 
         if (move > 0)
@@ -52,12 +50,13 @@ public class PlayerControls : MonoBehaviour
             Pause.SetActive(true);
             Time.timeScale = 0f;
         }
-
+        coyoteTimeCounter -= Time.deltaTime;
+        
     }
     //Will make sure the player can't jump unless they have touched the ground again.
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionStay2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Ground"))
+        if (other.gameObject.CompareTag("Ground") && rb.velocity.y <= 0)
         {
            foreach (var contact in other.contacts) 
            {
@@ -65,13 +64,27 @@ public class PlayerControls : MonoBehaviour
                 if (contact.normal.y > 0.7f)
                 {
                     //This will set it so that when the player touches anything with the ground tag they will be allowed to jump again.
-                    isjumping = false;
+                    
+                    coyoteTimeCounter = coyoteTime;
                 animator.SetBool("IsJumping?", false);
 
             }
                 
         }
             
+        }
+    }
+    private void FixedUpdate()
+    {
+        if (isjumping)
+        {
+            animator.SetBool("IsJumping?", true);
+            rb.AddForce(new Vector2(rb.velocity.x, jump), ForceMode2D.Impulse);
+            isjumping = false;
+           
+            coyoteTimeCounter = 0;
+            //Will find the audio and play the sound that has that name attached to it.
+            FindObjectOfType<AudioManager>().Play("PlayerJump");
         }
     }
 }

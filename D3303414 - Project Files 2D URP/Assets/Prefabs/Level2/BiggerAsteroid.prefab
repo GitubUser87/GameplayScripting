@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7074775811298177595}
   - component: {fileID: 6521311497319187252}
   - component: {fileID: 2460421446324719517}
+  - component: {fileID: -6865803053947055077}
   m_Layer: 0
   m_Name: BiggerAsteroid
   m_TagString: Untagged
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e635a141619479b4593a5b779d6c84de, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9622642, g: 0.75800997, b: 0.75800997, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -163,3 +164,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreValue: 10
+--- !u!114 &-6865803053947055077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4570802345279155933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 153e74be15b68c743b425996a0628ba0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Smallerasteroid: {fileID: 1257236649752432436, guid: 0d7d6b715a2ac4044873478221ae2bdd, type: 3}

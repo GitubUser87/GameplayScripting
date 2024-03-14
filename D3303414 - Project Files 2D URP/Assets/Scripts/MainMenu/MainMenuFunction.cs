@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuFunction : MonoBehaviour
 {
+    
     public void playGame1()
     {
         FindObjectOfType<AudioManager>().Play("MenuSound");
@@ -39,4 +40,5 @@ public class MainMenuFunction : MonoBehaviour
         //This will play the sound selected.
         FindObjectOfType<AudioManager>().Play("MenuSound");
     }
+   
 }

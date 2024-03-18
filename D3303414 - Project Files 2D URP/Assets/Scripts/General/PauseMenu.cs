@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
+    public string Level;
     public void Pause()
     {
         //Will find the audio and play the sound that has that name attached to it.
@@ -25,10 +26,18 @@ public class PauseMenu : MonoBehaviour
         //This will set the game back into motion.
     }
 
+    public void Restart()
+    {
+        FindObjectOfType<AudioManager>().Play("MenuSound"); 
+        SceneManager.LoadScene(Level);
+        Time.timeScale = 1f;
+    }
+
     public void Sound()
     {
         //This will play the selected audio.
         FindObjectOfType<AudioManager>().Play("MenuSound");
+ 
     }
 
     public void Quit(int sceneID)

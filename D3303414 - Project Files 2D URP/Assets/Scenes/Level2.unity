@@ -1133,6 +1133,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 8199296121245061627, guid: 2de9c7a69885e3249a0585109ae1f4f1, type: 3}
+      propertyPath: Level
+      value: Level2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1305,6 +1309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 1237666286}
   bulletPrefab: {fileID: 6287454171504198390, guid: 6d1e71f45e1f1424cb6c20f738a491ec, type: 3}
+  bulletPrefab2: {fileID: 0}
   bulletSpeed: 10
   fireRate: 0.5
 --- !u!50 &2015092181

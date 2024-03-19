@@ -11,6 +11,7 @@ public class PlayerControls : MonoBehaviour
     public GameObject Pause;
     public float jump;
 
+    public int jumpLimit = 2;
     private bool isjumping;
     private float coyoteTime = 0.2f;
     private float coyoteTimeCounter;
@@ -32,7 +33,7 @@ public class PlayerControls : MonoBehaviour
         {
            
             isjumping = true;
-            
+            jumpLimit--;
         }
 
         if (move > 0)
@@ -56,7 +57,7 @@ public class PlayerControls : MonoBehaviour
     //Will make sure the player can't jump unless they have touched the ground again.
     private void OnCollisionStay2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Ground") && rb.velocity.y <= 0)
+        if (other.gameObject.CompareTag("Ground") && rb.velocity.y <= 0 )
         {
            foreach (var contact in other.contacts) 
            {
@@ -64,9 +65,9 @@ public class PlayerControls : MonoBehaviour
                 if (contact.normal.y > 0.7f)
                 {
                     //This will set it so that when the player touches anything with the ground tag they will be allowed to jump again.
-                    
+                    jumpLimit = 2;
                     coyoteTimeCounter = coyoteTime;
-                animator.SetBool("IsJumping?", false);
+                    animator.SetBool("IsJumping?", false);
 
             }
                 
@@ -76,7 +77,7 @@ public class PlayerControls : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (isjumping)
+        if (isjumping && jumpLimit != 0)
         {
             animator.SetBool("IsJumping?", true);
             rb.AddForce(new Vector2(rb.velocity.x, jump), ForceMode2D.Impulse);

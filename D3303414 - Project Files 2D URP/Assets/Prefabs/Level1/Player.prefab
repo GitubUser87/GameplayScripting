@@ -167,7 +167,7 @@ MonoBehaviour:
   move: 0
   speed: 5
   Pause: {fileID: 0}
-  jump: 15
+  jump: 13
 --- !u!82 &-6832212160873334873
 AudioSource:
   m_ObjectHideFlags: 0
@@ -301,4 +301,4 @@ MonoBehaviour:
   hasShield: 0
   duration: 2
   respawnPosition: {x: -7.691411, y: -4.605924, z: 0}
-  GameOver: {fileID: 0}
+  GameOver: {fileID: 5055009689704791069, guid: 745f11f10338d2c489cddf7cba182ff0, type: 3}

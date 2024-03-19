@@ -12,6 +12,7 @@ public class LifeSpawn : MonoBehaviour
         if (other.tag == "Player")
         {
             Instantiate(life, transform.position + (Vector3)spawnPosition, transform.rotation);
+            FindObjectOfType<AudioManager>().Play("Chest");
             Destroy(gameObject);
         }
     }

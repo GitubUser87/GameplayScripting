@@ -29,15 +29,24 @@ public class PlayerControls : MonoBehaviour
         move = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(move * speed, rb.velocity.y);
         //This will make it so that unless both of the requirements have been met then the code below won't function.
-        if (Input.GetButtonDown("Jump") && coyoteTimeCounter > 0)
+        if (Input.GetButtonDown("Jump"))
         {
-           
+           if (coyoteTimeCounter > 0)
+            {
+
             isjumping = true;
-            
+            }
+            else if (doubleJump)
+            {
+                jump = 8;
+                isjumping = true;
+                doubleJump = false;
+
+            }
         }
-       
 
 
+        //This will flip the sprite depending on which direction the player is moving.
         if (move > 0)
         {
             spriteRenderer.flipX = false;
@@ -46,8 +55,9 @@ public class PlayerControls : MonoBehaviour
         {
             spriteRenderer.flipX = true;
         }
-        //This will flip the sprite depending on which direction the player is moving.
+        
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        //This will open the pause menu when the player presses the correct button.
         if (Input.GetButtonDown("Pause"))
         {
             Pause.SetActive(true);
@@ -69,9 +79,14 @@ public class PlayerControls : MonoBehaviour
                     //This will set it so that when the player touches anything with the ground tag they will be allowed to jump again.
                    
                     coyoteTimeCounter = coyoteTime;
+                    doubleJump = true;
                     animator.SetBool("IsJumping?", false);
 
-            }
+                }
+                else if (contact.normal.y < 0.7f)
+                {
+                    doubleJump = false;
+                }
                 
         }
             
@@ -84,7 +99,7 @@ public class PlayerControls : MonoBehaviour
             animator.SetBool("IsJumping?", true);
             rb.AddForce(new Vector2(rb.velocity.x, jump), ForceMode2D.Impulse);
             isjumping = false;
-           
+            jump = 13;
             coyoteTimeCounter = 0;
             //Will find the audio and play the sound that has that name attached to it.
             FindObjectOfType<AudioManager>().Play("PlayerJump");

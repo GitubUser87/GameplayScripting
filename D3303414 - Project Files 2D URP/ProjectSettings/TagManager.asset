@@ -8,6 +8,7 @@ TagManager:
   - Asteroid
   - Bullet
   - Trigger
+  - Teleporter
   layers:
   - Default
   - TransparentFX

@@ -105,3 +105,15 @@ MonoBehaviour:
     pitch: 3
     loop: 0
     source: {fileID: 0}
+  - name: Chest
+    clip: {fileID: 8300000, guid: 15df3ade56d83fb4b91295d11ca9324e, type: 3}
+    volume: 1
+    pitch: 3
+    loop: 0
+    source: {fileID: 0}
+  - name: Door
+    clip: {fileID: 8300000, guid: 9e9343f38b6e1304a9429a208777f1f0, type: 3}
+    volume: 1
+    pitch: 3
+    loop: 0
+    source: {fileID: 0}

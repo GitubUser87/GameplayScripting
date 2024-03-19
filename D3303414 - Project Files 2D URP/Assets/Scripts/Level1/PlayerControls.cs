@@ -11,7 +11,7 @@ public class PlayerControls : MonoBehaviour
     public GameObject Pause;
     public float jump;
 
-    public int jumpLimit = 2;
+    bool doubleJump = true;
     private bool isjumping;
     private float coyoteTime = 0.2f;
     private float coyoteTimeCounter;
@@ -33,8 +33,10 @@ public class PlayerControls : MonoBehaviour
         {
            
             isjumping = true;
-            jumpLimit--;
+            
         }
+       
+
 
         if (move > 0)
         {
@@ -65,7 +67,7 @@ public class PlayerControls : MonoBehaviour
                 if (contact.normal.y > 0.7f)
                 {
                     //This will set it so that when the player touches anything with the ground tag they will be allowed to jump again.
-                    jumpLimit = 2;
+                   
                     coyoteTimeCounter = coyoteTime;
                     animator.SetBool("IsJumping?", false);
 
@@ -77,7 +79,7 @@ public class PlayerControls : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (isjumping && jumpLimit != 0)
+        if (isjumping)
         {
             animator.SetBool("IsJumping?", true);
             rb.AddForce(new Vector2(rb.velocity.x, jump), ForceMode2D.Impulse);
@@ -87,5 +89,7 @@ public class PlayerControls : MonoBehaviour
             //Will find the audio and play the sound that has that name attached to it.
             FindObjectOfType<AudioManager>().Play("PlayerJump");
         }
+        
+    
     }
 }

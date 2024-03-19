@@ -12,7 +12,7 @@ public class KillZoneLevel1 : MonoBehaviour
         if (other.tag == "Player")
         {
             //this will kill the player if they touch it.
-            print ("Hello");
+           
             FindObjectOfType<AudioManager>().Play("DeathSound");
             GameOverScreen.Instance.gameObject.SetActive(true);
             Destroy(other.gameObject);

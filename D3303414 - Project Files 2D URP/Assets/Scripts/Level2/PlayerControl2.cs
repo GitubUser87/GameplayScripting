@@ -26,6 +26,8 @@ public class PlayerControl2 : MonoBehaviour
 
         Vector3 velocity = new Vector3(0, Input.GetAxis("Vertical") * maxSpeed * Time.deltaTime, 0);
         pos += rot * velocity;
+        GetComponent<AudioSource>().volume = Mathf.Min(1,velocity.magnitude/Time.deltaTime);
+        
         
         transform.position = pos;
         if (Input.GetButtonDown("Pause"))

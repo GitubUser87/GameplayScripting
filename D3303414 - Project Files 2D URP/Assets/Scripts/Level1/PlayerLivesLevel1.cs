@@ -1,4 +1,5 @@
 
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -58,10 +59,22 @@ public class PlayerLivesLevel1 : MonoBehaviour
             trail.Clear();
         }
         spriteRenderer.enabled = true;
+        StartCoroutine("Flicker");
         rigid.constraints = RigidbodyConstraints2D.FreezeRotation;
         transform.position = respawnPosition;
         collider.enabled = true;
 
     }
-
+    IEnumerator Flicker()
+    {
+        float time = 1f;
+        while (time > 0) 
+        {
+            spriteRenderer.color = new Color(1f, 1f, 1f, (Mathf.Sin(time * 50) + 1) * 0.5f);
+            yield return null;
+            time = time - Time.deltaTime;
+        }
+        
+        spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
+    }
 }

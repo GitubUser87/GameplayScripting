@@ -1,4 +1,4 @@
-
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -37,11 +37,10 @@ public class PlayerLives : MonoBehaviour
                     trail.enabled = false;
                 //This will disable the trail renderer if there is one detected. 
                 }
-               
+                
                 collider.enabled = false;
                 Invoke("Reappear", 2);
-            var s = Instantiate(shield);
-            Destroy(s, 2);
+           
             transform.position = respawnPosition;
 
         }
@@ -55,17 +54,31 @@ public class PlayerLives : MonoBehaviour
 
         void Reappear()
         {
-            if (trail != null)
+        var s = Instantiate(shield);
+        Destroy(s, 2);
+        StartCoroutine("Flicker");
+        if (trail != null)
             {
                 trail.enabled = true;
                 trail.Clear();
             //This will renable the trail renderer.
             //The clear function will make it so that it doesn't snap to the player's position
             }
-            
-            
-            collider.enabled = true;
+        
+
+        collider.enabled = true;
 
         }
-    
+        IEnumerator Flicker()
+    {
+        float time = 1f;
+        while (time > 0)
+        {
+            spriteRenderer.color = new Color(1f, 1f, 1f, (Mathf.Sin(time * 50) + 1) * 0.5f);
+            yield return null;
+            time = time - Time.deltaTime;
+        }
+
+        spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
+    }
 }

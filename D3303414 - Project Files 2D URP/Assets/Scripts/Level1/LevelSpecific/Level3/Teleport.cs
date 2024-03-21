@@ -14,6 +14,7 @@ public class Teleport : MonoBehaviour
             {
                 transform.position = currentTeleporter.GetComponent<Destination>().GetDestination().position;
                 FindObjectOfType<AudioManager>().Play("Door");
+               
 
             }
         }

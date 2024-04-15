@@ -10,12 +10,18 @@ public class ShootingPowerUp1 : MonoBehaviour
     public float fireRate = 0.2f;
     float lastShotTime = 0;
     bool equipped = false;
+    bool fullyUpgraded = false;
 
     private void Start()
     {
         if (equipped == false)
         {
             Destroy(gameObject, 4);
+        }
+
+        if (fullyUpgraded == true) 
+        {
+            Destroy(gameObject);
         }
     }
 
@@ -27,7 +33,17 @@ public class ShootingPowerUp1 : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("HealthPickup");
             if(other.TryGetComponent<Shooting>(out Shooting shooting))
             {
-                shooting.doubleShot = true;
+                if (shooting.doubleShot == true)
+                {
+                    shooting.doubleShot = false;
+                    shooting.tripleShot = true;
+                }
+                else
+                {
+                    shooting.doubleShot = true;
+                }
+                
+
             }
             Destroy(gameObject);
         }

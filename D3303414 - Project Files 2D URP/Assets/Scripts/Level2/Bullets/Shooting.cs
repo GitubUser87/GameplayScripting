@@ -39,6 +39,8 @@ public class Shooting : MonoBehaviour
                     bullet2.GetComponent<Rigidbody2D>().velocity = bulletSpawnPoint.up * bulletSpeed;
                     lastShotTime = Time.time;
                     FindObjectOfType<AudioManager>().Play("PlayerShoot");
+
+                    
                 }
 
             }

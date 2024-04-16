@@ -44,7 +44,7 @@ public class Shooting : MonoBehaviour
                     lastShotTime = Time.time;
                     FindObjectOfType<AudioManager>().Play("PlayerShoot");
 
-                    
+                    //This will fire two shots instead of one.
                 }
 
                 else if (tripleShot == true)
@@ -61,6 +61,8 @@ public class Shooting : MonoBehaviour
                     bullet3.GetComponent<Rigidbody2D>().velocity = bulletSpawnPoint.up * bulletSpeed;
                     lastShotTime = Time.time;
                     FindObjectOfType<AudioManager>().Play("PlayerShoot");
+
+                    //This will fire three shots instead of one or two.
                 }
 
             }

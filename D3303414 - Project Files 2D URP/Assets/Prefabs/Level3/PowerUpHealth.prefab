@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5273871585444311774}
   - component: {fileID: 8646686515820121457}
   - component: {fileID: 3541243687320839395}
-  - component: {fileID: -3354535458638246380}
+  - component: {fileID: 5839188033092695339}
   m_Layer: 0
   m_Name: PowerUpHealth
   m_TagString: Untagged
@@ -131,7 +131,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.34, y: 0.33}
   m_EdgeRadius: 0
---- !u!114 &-3354535458638246380
+--- !u!114 &5839188033092695339
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8934255493110591743}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a10b7b93972f2ac4eafa09eefcced98f, type: 3}
+  m_Script: {fileID: 11500000, guid: 4593f270c244cda4995a0a5ad2effbc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   destruction: 5

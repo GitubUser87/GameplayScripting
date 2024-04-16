@@ -30,10 +30,11 @@ public class PlayerLives : MonoBehaviour
         {
             lives--;
         Shooting shooting = GetComponent<Shooting>();
-        //ShootingPowerUp1 upgrade = GetComponent<ShootingPowerUp1>();
-        //upgrade.fullyUpgraded = false;
+        ShootingPowerUp1 upgrade = GetComponent<ShootingPowerUp1>();
+        ShootingPowerUp1.fullyUpgraded = false;
         shooting.doubleShot = false;
         shooting.tripleShot = false;
+        //This will set all upgrades back to the base weapon.
 
         if (lives == 0)
             {
@@ -50,7 +51,7 @@ public class PlayerLives : MonoBehaviour
                 }
                 
                 collider.enabled = false;
-                Invoke("Reappear", 2);
+                Reappear();
            
             transform.position = respawnPosition;
 

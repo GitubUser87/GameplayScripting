@@ -6,7 +6,7 @@ public class ShootingPowerUp1 : MonoBehaviour
 {
 
     bool equipped = false;
-   public bool fullyUpgraded = false;
+    public static bool fullyUpgraded = false;
 
     private void Start()
     {
@@ -18,6 +18,7 @@ public class ShootingPowerUp1 : MonoBehaviour
         if (fullyUpgraded == true) 
         {
             Destroy(gameObject);
+            //This prevents the object from spawning if the player has both upgrades equipped.
         }
     }
 
@@ -26,6 +27,7 @@ public class ShootingPowerUp1 : MonoBehaviour
         if (other.tag == "Player")
         {
             equipped = true;
+            //This makes sure the upgrade won't delete whilst the player has it equipped.
             FindObjectOfType<AudioManager>().Play("HealthPickup");
             if(other.TryGetComponent<Shooting>(out Shooting shooting))
             {
@@ -34,10 +36,13 @@ public class ShootingPowerUp1 : MonoBehaviour
                     shooting.doubleShot = false;
                     shooting.tripleShot = true;
                     fullyUpgraded = true;
+
+                    //This will set the triple shot to true and the double shot to false, as well as setting fully upgraded totrue so that the upgrade won't spawn anymore.
                 }
                 else 
                 {
                     shooting.doubleShot = true;
+                    //This will set the double shot to true.
                 }
                 
 

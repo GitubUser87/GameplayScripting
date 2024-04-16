@@ -1,9 +1,9 @@
-
 using System.Collections;
+using UnityEditor.Rendering.Universal;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerLivesLevel1 : MonoBehaviour
+public class PlayerLivesLevel3 : MonoBehaviour
 {
     public float lives = 3;
     public bool hasShield = false;
@@ -12,20 +12,23 @@ public class PlayerLivesLevel1 : MonoBehaviour
     TrailRenderer trail;
     SpriteRenderer spriteRenderer;
     Collider2D collider;
-    Rigidbody2D rigid;
+
+    public GameObject shield;
     public GameObject GameOver;
+  
 
     private void Awake()
     {
-
+        
         trail = GetComponent<TrailRenderer>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         collider = GetComponent<Collider2D>();
-        rigid = GetComponent<Rigidbody2D>();
     }
     public void Hit()
     {
         lives--;
+  
+
         if (lives == 0)
         {
             Destroy(gameObject);
@@ -37,11 +40,13 @@ public class PlayerLivesLevel1 : MonoBehaviour
             if (trail != null)
             {
                 trail.enabled = false;
+                //This will disable the trail renderer if there is one detected. 
             }
-            spriteRenderer.enabled = false;
+
             collider.enabled = false;
             Reappear();
-            rigid.constraints = RigidbodyConstraints2D.FreezePosition;
+
+            transform.position = respawnPosition;
 
         }
     }
@@ -49,32 +54,37 @@ public class PlayerLivesLevel1 : MonoBehaviour
     public void Heal()
     {
         lives = lives + 1;
+        //This will add one life when called for.
     }
 
     void Reappear()
     {
+        var s = Instantiate(shield);
+        Destroy(s, 2);
+        StartCoroutine("Flicker");
         if (trail != null)
         {
             trail.enabled = true;
             trail.Clear();
+            //This will renable the trail renderer.
+            //The clear function will make it so that it doesn't snap to the player's position
         }
-        spriteRenderer.enabled = true;
-        StartCoroutine("Flicker");
-        rigid.constraints = RigidbodyConstraints2D.FreezeRotation;
-        transform.position = respawnPosition;
+
+
         collider.enabled = true;
 
     }
     IEnumerator Flicker()
     {
         float time = 1f;
-        while (time > 0) 
+        while (time > 0)
         {
             spriteRenderer.color = new Color(1f, 1f, 1f, (Mathf.Sin(time * 50) + 1) * 0.5f);
             yield return null;
             time = time - Time.deltaTime;
         }
-        
+
         spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
     }
 }
+

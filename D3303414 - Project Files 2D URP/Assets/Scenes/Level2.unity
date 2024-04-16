@@ -1167,7 +1167,7 @@ PrefabInstance:
       objectReference: {fileID: 7000446803387641765, guid: 9ce1d3442ba9d6c4c82ebe30e66b89f4, type: 3}
     - target: {fileID: 3514273839235861993, guid: be270ee548eef7f4380e59dcdb248711, type: 3}
       propertyPath: TimeBetweenSpawn
-      value: 25
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5742370620790587011, guid: be270ee548eef7f4380e59dcdb248711, type: 3}
       propertyPath: m_RootOrder
@@ -1518,7 +1518,7 @@ MonoBehaviour:
   bulletSpeed: 10
   fireRate: 0.25
   doubleShot: 0
-  tripleShot: 1
+  tripleShot: 0
 --- !u!50 &2015092181
 Rigidbody2D:
   serializedVersion: 4

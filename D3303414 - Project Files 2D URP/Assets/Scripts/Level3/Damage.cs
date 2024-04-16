@@ -17,7 +17,7 @@ public class Damage : MonoBehaviour
                 //Damage();
                 //Will find the audio and play the sound that has that name attached to it.
                 FindObjectOfType<AudioManager>().Play("DeathSound");
-                if (other.TryGetComponent<PlayerLives>(out PlayerLives playerlives))
+                if (other.TryGetComponent<PlayerLivesLevel3>(out PlayerLivesLevel3 playerlives))
                 {
                
                     if (!playerlives.hasShield) 

@@ -11,12 +11,14 @@ public class PlayerLives : MonoBehaviour
     TrailRenderer trail;
     SpriteRenderer spriteRenderer;
     Collider2D collider;
+    
     public GameObject shield;
     public GameObject GameOver;
+    public Shooting Spaceship;
 
     private void Awake()
     {
-
+        Spaceship = GetComponent<Shooting>();
         trail = GetComponent<TrailRenderer>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         collider = GetComponent<Collider2D>();
@@ -24,6 +26,7 @@ public class PlayerLives : MonoBehaviour
         public void Hit()
         {
             lives--;
+            
             if (lives == 0)
             {
                 Destroy(gameObject);

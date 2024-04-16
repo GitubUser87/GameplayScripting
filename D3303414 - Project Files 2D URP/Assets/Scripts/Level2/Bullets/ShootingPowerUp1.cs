@@ -38,7 +38,7 @@ public class ShootingPowerUp1 : MonoBehaviour
                     shooting.doubleShot = false;
                     shooting.tripleShot = true;
                 }
-                else
+                else 
                 {
                     shooting.doubleShot = true;
                 }

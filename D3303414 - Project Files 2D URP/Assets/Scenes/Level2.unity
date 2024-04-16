@@ -201,7 +201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 51691702}
   m_Layer: 0
-  m_Name: bulletSpawnPoint (4)
+  m_Name: Tripleshot2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -214,14 +214,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 51691701}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.58, y: 1, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.13052624, w: 0.9914449}
+  m_LocalPosition: {x: 0.5, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2015092175}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -15}
 --- !u!1 &182096131
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,7 +232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 182096132}
   m_Layer: 0
-  m_Name: bulletSpawnPoint (2)
+  m_Name: Doubleshot2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -263,7 +263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 197246796}
   m_Layer: 0
-  m_Name: bulletSpawnPoint (3)
+  m_Name: Tripleshot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -277,7 +277,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 197246795}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.74, y: 1, z: 0}
+  m_LocalPosition: {x: -0.5, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -747,7 +747,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1119375666}
   m_Layer: 0
-  m_Name: bulletSpawnPoint (1)
+  m_Name: Doubleshot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -778,7 +778,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1237666286}
   m_Layer: 0
-  m_Name: bulletSpawnPoint
+  m_Name: PrimaryShot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1773,6 +1773,7 @@ MonoBehaviour:
   respawnPosition: {x: 0, y: 0, z: 0}
   shield: {fileID: 7456051445107082592, guid: 465d147b3a825f64c827de7145be8189, type: 3}
   GameOver: {fileID: 409228940}
+  Spaceship: {fileID: 0}
 --- !u!114 &2015092185
 MonoBehaviour:
   m_ObjectHideFlags: 0

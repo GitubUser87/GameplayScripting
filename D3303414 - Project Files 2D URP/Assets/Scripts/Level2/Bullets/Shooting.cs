@@ -23,7 +23,7 @@ public class Shooting : MonoBehaviour
         {
             if (Time.time > lastShotTime + fireRate)
             {
-                if (doubleShot == false)
+                if (doubleShot == false & tripleShot == false)
                 {
 
                     //This will spawn in a new bullet everytime the command is initiated.

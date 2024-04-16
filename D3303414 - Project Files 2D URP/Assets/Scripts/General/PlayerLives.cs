@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor.Rendering.Universal;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,10 +16,12 @@ public class PlayerLives : MonoBehaviour
     public GameObject shield;
     public GameObject GameOver;
     public Shooting Spaceship;
+    public ShootingPowerUp1 Upgrade;
 
     private void Awake()
     {
         Spaceship = GetComponent<Shooting>();
+        Upgrade = GetComponent<ShootingPowerUp1>();
         trail = GetComponent<TrailRenderer>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         collider = GetComponent<Collider2D>();
@@ -26,8 +29,13 @@ public class PlayerLives : MonoBehaviour
         public void Hit()
         {
             lives--;
-            
-            if (lives == 0)
+        Shooting shooting = GetComponent<Shooting>();
+        //ShootingPowerUp1 upgrade = GetComponent<ShootingPowerUp1>();
+        //upgrade.fullyUpgraded = false;
+        shooting.doubleShot = false;
+        shooting.tripleShot = false;
+
+        if (lives == 0)
             {
                 Destroy(gameObject);
             Time.timeScale = 0f;

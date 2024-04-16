@@ -4,19 +4,15 @@ using UnityEngine;
 
 public class ShootingPowerUp1 : MonoBehaviour
 {
-    public Transform bulletspawn;
-    public GameObject bulletPrefab;
-    public float bulletSpeed = 10;
-    public float fireRate = 0.2f;
-    float lastShotTime = 0;
+
     bool equipped = false;
-    bool fullyUpgraded = false;
+   public bool fullyUpgraded = false;
 
     private void Start()
     {
         if (equipped == false)
         {
-            Destroy(gameObject, 4);
+            Destroy(gameObject, 8);
         }
 
         if (fullyUpgraded == true) 
@@ -37,6 +33,7 @@ public class ShootingPowerUp1 : MonoBehaviour
                 {
                     shooting.doubleShot = false;
                     shooting.tripleShot = true;
+                    fullyUpgraded = true;
                 }
                 else 
                 {

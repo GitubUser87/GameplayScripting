@@ -42,7 +42,7 @@ public class Shooting : MonoBehaviour
                     var bullet2 = Instantiate(bulletPrefab, double2bulletSpawnPoint.position, bulletSpawnPoint.rotation);
                     bullet2.GetComponent<Rigidbody2D>().velocity = bulletSpawnPoint.up * bulletSpeed;
                     lastShotTime = Time.time;
-                    FindObjectOfType<AudioManager>().Play("PlayerShoot");
+                    FindObjectOfType<AudioManager>().Play("DoubleShot");
 
                     //This will fire two shots instead of one.
                 }
@@ -60,7 +60,7 @@ public class Shooting : MonoBehaviour
                     var bullet3 = Instantiate(bulletPrefab, triple3bulletSpawnPoint.position, bulletSpawnPoint.rotation);
                     bullet3.GetComponent<Rigidbody2D>().velocity = bulletSpawnPoint.up * bulletSpeed;
                     lastShotTime = Time.time;
-                    FindObjectOfType<AudioManager>().Play("PlayerShoot");
+                    FindObjectOfType<AudioManager>().Play("TripleShot");
 
                     //This will fire three shots instead of one or two.
                 }

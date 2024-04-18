@@ -51,6 +51,18 @@ MonoBehaviour:
     pitch: 3
     loop: 0
     source: {fileID: 0}
+  - name: DoubleShot
+    clip: {fileID: 8300000, guid: 5e647622e62909d4e89bc4620de5ccbc, type: 3}
+    volume: 1
+    pitch: 3
+    loop: 0
+    source: {fileID: 0}
+  - name: TripleShot
+    clip: {fileID: 8300000, guid: aa5a39e211bdb5f4a81852ed08157eb4, type: 3}
+    volume: 1
+    pitch: 3
+    loop: 0
+    source: {fileID: 0}
   - name: PlayerJump
     clip: {fileID: 8300000, guid: fda8ee984f23cb44fa059bf6d41810bd, type: 3}
     volume: 1
@@ -113,6 +125,12 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Door
     clip: {fileID: 8300000, guid: 9e9343f38b6e1304a9429a208777f1f0, type: 3}
+    volume: 1
+    pitch: 3
+    loop: 0
+    source: {fileID: 0}
+  - name: Mechanic
+    clip: {fileID: 8300000, guid: dda96cc06abc1704c9425f43828c9a5e, type: 3}
     volume: 1
     pitch: 3
     loop: 0

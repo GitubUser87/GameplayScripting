@@ -28,7 +28,7 @@ public class ShootingPowerUp1 : MonoBehaviour
         {
             equipped = true;
             //This makes sure the upgrade won't delete whilst the player has it equipped.
-            FindObjectOfType<AudioManager>().Play("HealthPickup");
+            FindObjectOfType<AudioManager>().Play("Mechanic");
             if(other.TryGetComponent<Shooting>(out Shooting shooting))
             {
                 if (shooting.doubleShot == true)

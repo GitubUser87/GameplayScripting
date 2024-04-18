@@ -10,6 +10,7 @@ public class MultiPatrolPop_Up : MonoBehaviour
     private float SpawnTime;
     Rigidbody2D body;
     int wayPointIndex = 0;
+    bool movementAllowed = false;
 
     private void Start()
     {
@@ -20,19 +21,28 @@ public class MultiPatrolPop_Up : MonoBehaviour
     {
         if (Time.time > SpawnTime)
         {
-            Move();
+
             SpawnTime = Time.time + TimeBetweenSpawn;
+            movementAllowed = true;
             //This will delay the spawn between each round as to not lag the machine or make it impossible to play.
         }
     }
 
-    private void Move()
+    private void FixedUpdate()
     {
-        Vector2 newPosition = Vector2.MoveTowards(body.position, waypoints[wayPointIndex], speed);
-        body.MovePosition(newPosition);
-        if (Vector2.Distance(newPosition, waypoints[wayPointIndex]) < 0.1f)
+        if (movementAllowed)
         {
-            wayPointIndex = (wayPointIndex + 1) % waypoints.Length;
+            Vector2 newPosition = Vector2.MoveTowards(body.position, waypoints[wayPointIndex], speed);
+            body.MovePosition(newPosition);
+            if (Vector2.Distance(newPosition, waypoints[wayPointIndex]) < 0.1f)
+            {
+                if (wayPointIndex == 0)
+                {
+                    movementAllowed = false;
+                }
+                wayPointIndex = (wayPointIndex + 1) % waypoints.Length;
+
+            }
         }
     }
     void OnDrawGizmosSelected()

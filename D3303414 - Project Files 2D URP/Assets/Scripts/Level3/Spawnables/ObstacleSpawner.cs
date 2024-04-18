@@ -6,14 +6,17 @@ public class ObstacleSpawner : MonoBehaviour
 {
  
     public GameObject Obstacle;
-    public float maxX;
-    public float minX;
-    public float maxY;
-    public float minY;
+    //public float maxX;
+    //public float minX;
+    //public float maxY;
+    //public float minY;
     public float TimeBetweenSpawn;
     private float SpawnTime;
 
-   
+    private void Start()
+    {
+        SpawnTime = Time.time + TimeBetweenSpawn;
+    }
 
     private void Update()
     {

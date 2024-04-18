@@ -41,7 +41,7 @@ public class PlayerLivesLevel1 : MonoBehaviour
             spriteRenderer.enabled = false;
             collider.enabled = false;
             Reappear();
-            rigid.constraints = RigidbodyConstraints2D.FreezePosition;
+            
 
         }
     }
@@ -61,6 +61,7 @@ public class PlayerLivesLevel1 : MonoBehaviour
         spriteRenderer.enabled = true;
         StartCoroutine("Flicker");
         rigid.constraints = RigidbodyConstraints2D.FreezeRotation;
+     
         transform.position = respawnPosition;
         collider.enabled = true;
 

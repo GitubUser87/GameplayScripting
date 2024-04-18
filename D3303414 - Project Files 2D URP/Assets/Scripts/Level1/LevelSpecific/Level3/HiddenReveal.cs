@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class HiddenReveal : MonoBehaviour
@@ -7,6 +8,8 @@ public class HiddenReveal : MonoBehaviour
     public GameObject hidden;
     public GameObject button;
     public GameObject Hint;
+    public TextMeshProUGUI ObjectiveText;
+    public string Objective;
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -16,6 +19,7 @@ public class HiddenReveal : MonoBehaviour
             hidden.SetActive(true);
             button.SetActive(false);
             Hint.SetActive(false);
+            ObjectiveText.text = Objective;
             //Will find the audio and play the sound that has that name attached to it.
             FindObjectOfType<AudioManager>().Play("ButtonSound");
         }

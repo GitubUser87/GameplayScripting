@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ButtonControls : MonoBehaviour
 {
     public GameObject door;
     public GameObject button;
+    public TextMeshProUGUI ObjectiveText;
+    public string Objective;
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -16,6 +19,8 @@ public class ButtonControls : MonoBehaviour
             button.SetActive(false);
             //Will find the audio and play the sound that has that name attached to it.
             FindObjectOfType<AudioManager>().Play("ButtonSound");
+            ObjectiveText.text = Objective;
+
         }
         else
         {

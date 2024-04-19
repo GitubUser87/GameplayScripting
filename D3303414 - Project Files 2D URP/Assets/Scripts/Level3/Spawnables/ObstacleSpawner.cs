@@ -30,9 +30,6 @@ public class ObstacleSpawner : MonoBehaviour
 
     void spawn()
     {
-        ////This will pick a random float from the values that have been entered.
-        //float X = Range(X, X);
-        //float Y = Range(Y, Y);
         //This will then spawn the object at one of the selected floats.
         Instantiate(Obstacle, transform.position, transform.rotation);
     }

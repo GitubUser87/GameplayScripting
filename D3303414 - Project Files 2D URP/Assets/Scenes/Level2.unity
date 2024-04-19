@@ -1725,7 +1725,7 @@ MonoBehaviour:
   bulletSpeed: 10
   fireRate: 0.25
   doubleShot: 0
-  tripleShot: 1
+  tripleShot: 0
 --- !u!50 &2015092181
 Rigidbody2D:
   serializedVersion: 4

@@ -14,6 +14,19 @@ public class MainMenuFunction : MonoBehaviour
         
     }
 
+    public void playLevel2()
+    {
+        FindObjectOfType<AudioManager>().Play("MenuSound");
+        //This code is designed to load up Game 1.
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+    }
+    public void playLevel3()
+    {
+        FindObjectOfType<AudioManager>().Play("MenuSound");
+        //This code is designed to load up Game 1.
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+    }
+    
     public void playGame2()
     {
         FindObjectOfType<AudioManager>().Play("MenuSound");

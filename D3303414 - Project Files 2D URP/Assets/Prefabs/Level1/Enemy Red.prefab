@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7680050003841083991}
   - component: {fileID: 3529060570160850713}
   - component: {fileID: 5937364089129877007}
+  - component: {fileID: 4848100362611620053}
   m_Layer: 0
   m_Name: Enemy Red
   m_TagString: Untagged
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 861456ef2e841424eb1cc7b56c4ba4ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -138,7 +139,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -174,5 +175,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8328621cc21b334494f95114dc8459d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  waypoints: []
+  speed: 0.05
+  waypoints:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+--- !u!95 &4848100362611620053
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7374572256107658579}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a09f423841b82e24fbc208dd2b56bd1e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

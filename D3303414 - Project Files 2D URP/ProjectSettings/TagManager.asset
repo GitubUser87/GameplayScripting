@@ -10,6 +10,8 @@ TagManager:
   - Trigger
   - Teleporter
   - Enemy
+  - Feet
+  - EnemyKill
   layers:
   - Default
   - TransparentFX

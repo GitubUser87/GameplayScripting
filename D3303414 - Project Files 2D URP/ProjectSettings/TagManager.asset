@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - Trigger
   - Teleporter
+  - Enemy
   layers:
   - Default
   - TransparentFX

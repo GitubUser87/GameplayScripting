@@ -9,7 +9,7 @@ public class EnemyStomp : MonoBehaviour
     {
         if (other.CompareTag("EnemyKill"))
         {
-          
+            FindObjectOfType<AudioManager>().Play("Stomp");
             Destroy(other.gameObject);
         }
     }

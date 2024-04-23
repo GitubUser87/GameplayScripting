@@ -69,6 +69,12 @@ MonoBehaviour:
     pitch: 3
     loop: 0
     source: {fileID: 0}
+  - name: Stomp
+    clip: {fileID: 8300000, guid: a45d972628c797641b872374d6914b94, type: 3}
+    volume: 1
+    pitch: 3
+    loop: 0
+    source: {fileID: 0}
   - name: AsteroidDestruction
     clip: {fileID: 8300000, guid: 7efb418262fe8dd47afb8415f8512508, type: 3}
     volume: 1

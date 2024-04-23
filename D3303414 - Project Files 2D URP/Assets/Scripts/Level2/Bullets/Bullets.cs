@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullets : MonoBehaviour
 {
     public float life = 1;
-
+    public CameraShake cameraShake;
     void Awake()
     {
         Destroy(gameObject, life);
@@ -22,6 +22,7 @@ public class Bullets : MonoBehaviour
 
         if (other.tag == "Asteroid")
         {
+            
             Destroy(gameObject);
         }
     }

@@ -19,6 +19,7 @@ public class Score : MonoBehaviour
             //Will find the audio and play the sound that has that name attached to it.
             FindObjectOfType<AudioManager>().Play("AsteroidDestruction");
             FindFirstObjectByType<AddPoints>().AddScore(ScoreValue);
+            FindFirstObjectByType<CameraShake>().ShakeCamera();
             Destroy(gameObject);
         }
 

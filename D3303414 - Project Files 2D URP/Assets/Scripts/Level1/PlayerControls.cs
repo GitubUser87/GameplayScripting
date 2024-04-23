@@ -97,7 +97,7 @@ public class PlayerControls : MonoBehaviour
         if (isjumping)
         {
             animator.SetBool("IsJumping?", true);
-            rb.AddForce(new Vector2(rb.velocity.x, jump), ForceMode2D.Impulse);
+            rb.velocity = new Vector2(rb.velocity.x, jump);
             isjumping = false;
             jump = 13;
             coyoteTimeCounter = 0;

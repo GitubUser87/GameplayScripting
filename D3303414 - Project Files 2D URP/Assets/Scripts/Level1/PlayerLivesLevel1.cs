@@ -1,4 +1,5 @@
 
+using Cinemachine;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,6 +15,7 @@ public class PlayerLivesLevel1 : MonoBehaviour
     Collider2D collider;
     Rigidbody2D rigid;
     public GameObject GameOver;
+    [SerializeField] Collider2D cameraBounds;
 
     private void Awake()
     {
@@ -64,7 +66,11 @@ public class PlayerLivesLevel1 : MonoBehaviour
      
         transform.position = respawnPosition;
         collider.enabled = true;
-
+        if (cameraBounds != null)
+        {
+            var confiner = FindAnyObjectByType<CinemachineConfiner>();
+            confiner.m_BoundingShape2D = cameraBounds;
+        }
     }
     IEnumerator Flicker()
     {

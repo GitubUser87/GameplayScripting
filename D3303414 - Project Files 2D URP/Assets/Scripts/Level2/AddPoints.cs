@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class AddPoints : MonoBehaviour
 {
-    int score = 0;
+    public int score = 0;
     public Text MyscoreText;
     public void AddScore(int toaddscore)
     {

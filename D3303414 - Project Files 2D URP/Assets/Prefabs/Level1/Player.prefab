@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 942254175314218884}
-  - component: {fileID: 93141506947742997}
+  - component: {fileID: 4832210168548988026}
   - component: {fileID: 753191338955359165}
   m_Layer: 0
   m_Name: Feet
@@ -33,8 +33,8 @@ Transform:
   m_Father: {fileID: 6555811192254856674}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &93141506947742997
-BoxCollider2D:
+--- !u!70 &4832210168548988026
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -65,19 +65,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.57}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.39, y: 0.15}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.016712656, y: -0.5911259}
+  m_Size: {x: 0.53873926, y: 0.1777506}
+  m_Direction: 1
 --- !u!114 &753191338955359165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +119,7 @@ Transform:
   m_Children:
   - {fileID: 942254175314218884}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4156595617926317124
 SpriteRenderer:
@@ -395,6 +385,7 @@ MonoBehaviour:
   duration: 2
   respawnPosition: {x: -0.5270482, y: -1.522, z: 0}
   GameOver: {fileID: 0}
+  cameraBounds: {fileID: 0}
 --- !u!114 &8846712396488172255
 MonoBehaviour:
   m_ObjectHideFlags: 0

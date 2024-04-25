@@ -78,7 +78,7 @@ public class PlayerLives : MonoBehaviour
             }
         
 
-        collider.enabled = true;
+        
 
         }
         IEnumerator Flicker()
@@ -92,5 +92,6 @@ public class PlayerLives : MonoBehaviour
         }
 
         spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
+        collider.enabled = true;
     }
 }

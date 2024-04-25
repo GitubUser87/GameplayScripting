@@ -61004,7 +61004,8 @@ PrefabInstance:
       propertyPath: Pause
       value: 
       objectReference: {fileID: 1895074641}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 93141506947742997, guid: a08f0b440d7f4584192575fa99bd5073, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

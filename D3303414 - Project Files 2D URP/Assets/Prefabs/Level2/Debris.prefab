@@ -163,3 +163,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreValue: 50
+  Death: {fileID: 7013958162747872710, guid: b3e14081fcabbdf41a6611e72bee3fea, type: 3}

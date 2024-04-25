@@ -136,6 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreValue: 5
+  Death: {fileID: 7013958162747872710, guid: b3e14081fcabbdf41a6611e72bee3fea, type: 3}
 --- !u!114 &3896676894086780100
 MonoBehaviour:
   m_ObjectHideFlags: 0

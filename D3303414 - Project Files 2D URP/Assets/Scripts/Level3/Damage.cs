@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
-   
+    [SerializeField] GameObject Death;
     private void Start()
     {
         Destroy(gameObject,2);
@@ -24,7 +24,9 @@ public class Damage : MonoBehaviour
                     {
                     playerlives.Hit();
                     Destroy(gameObject);
-                    }
+                    GameObject Boom = Instantiate(Death, transform.position, transform.rotation);
+                    Destroy(Boom, 0.75f);
+                }
                 }
             
         }

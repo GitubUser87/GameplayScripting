@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class KillZone : MonoBehaviour
 {
+    [SerializeField] GameObject Death;
     //This code is designed to kill the player in case they fall into the void.
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -15,7 +16,9 @@ public class KillZone : MonoBehaviour
             if (other.TryGetComponent<PlayerLivesLevel1>(out PlayerLivesLevel1 playerlives))
             {
                 playerlives.Hit();
-                
+                GameObject Boom = Instantiate(Death, transform.position, transform.rotation);
+                Destroy(Boom, 0.75f);
+
             }
             else
             {

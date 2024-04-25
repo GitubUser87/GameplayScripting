@@ -10,7 +10,7 @@ using UnityEngine.SocialPlatforms.GameCenter;
 public class Score : MonoBehaviour
 {
     public int ScoreValue = 0;
-    
+    [SerializeField] GameObject Death;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -21,6 +21,8 @@ public class Score : MonoBehaviour
             FindFirstObjectByType<AddPoints>().AddScore(ScoreValue);
             FindFirstObjectByType<CameraShake>().ShakeCamera();
             Destroy(gameObject);
+            GameObject Boom = Instantiate(Death, transform.position, transform.rotation);
+            Destroy(Boom, 0.75f);
         }
 
         if (other.tag == "Player")
@@ -30,6 +32,8 @@ public class Score : MonoBehaviour
             if (other.TryGetComponent<PlayerLives>(out PlayerLives playerlives))
             {
                 playerlives.Hit();
+                GameObject Boom = Instantiate(Death, transform.position, transform.rotation);
+                Destroy(Boom, 0.75f);
             }
         }
     }

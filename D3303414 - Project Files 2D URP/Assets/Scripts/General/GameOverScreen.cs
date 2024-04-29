@@ -7,12 +7,19 @@ using UnityEngine.SceneManagement;
 public class GameOverScreen : MonoBehaviour
 {
     public string Level;
+    public string nextLevel;
+
     public static GameOverScreen Instance;
 
     private void Start()
     {
         Instance = this;
         gameObject.SetActive(false);
+    }
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(nextLevel);
+        Time.timeScale = 1f;
     }
     public void Restart()
     {

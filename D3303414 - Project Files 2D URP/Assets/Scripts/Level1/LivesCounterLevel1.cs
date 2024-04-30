@@ -9,7 +9,7 @@ public class LivesCounterLevel1 : MonoBehaviour
     public static LivesCounterLevel1 Instance;
 
     public TMP_Text livesText;
-
+    //This will display the amount of lives the player has on screen.
     private PlayerLivesLevel1 playerlives;
     private void Awake()
     {

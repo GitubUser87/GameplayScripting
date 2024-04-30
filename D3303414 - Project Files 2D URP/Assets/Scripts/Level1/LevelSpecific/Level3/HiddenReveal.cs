@@ -11,6 +11,8 @@ public class HiddenReveal : MonoBehaviour
     public TextMeshProUGUI ObjectiveText;
     public string Objective;
 
+    //This will set the hint tiles to inactive and set the new path tiles to active.
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))

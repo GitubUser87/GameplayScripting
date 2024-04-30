@@ -18,6 +18,9 @@ public class PlayerControls : MonoBehaviour
     private Rigidbody2D rb;
     SpriteRenderer spriteRenderer;
     Animator animator;
+
+    //This will allow the player to perform actions such as walk, jump, double jump.
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();

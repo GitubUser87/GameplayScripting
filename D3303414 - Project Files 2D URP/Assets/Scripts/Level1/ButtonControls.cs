@@ -12,7 +12,7 @@ public class ButtonControls : MonoBehaviour
     public GameObject specificDoor;
     public GameObject specificButton;
     
-    
+    //This will set the door and the button to inactive and allow the player to pass.
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -23,7 +23,7 @@ public class ButtonControls : MonoBehaviour
             button.SetActive(false);
             //Will find the audio and play the sound that has that name attached to it.
             FindObjectOfType<AudioManager>().Play("ButtonSound");
-            ObjectiveText.text = Objective;
+            ObjectiveText.text = Objective; //This will set the players objective as whatever has been entered.
             Destroy(specificDoor.gameObject);
             Destroy(specificButton.gameObject);
         }

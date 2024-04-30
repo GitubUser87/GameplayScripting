@@ -28,13 +28,7 @@ public class TimedButton : MonoBehaviour
             buttonActive = false;
             
         }
-        else
-        {
-            //This will make it so that the door will stay closed until the button is pressed.
-            //door.SetActive(true);
-            //button.SetActive(true);
-
-        }
+        
     }
     private void Update()
     {

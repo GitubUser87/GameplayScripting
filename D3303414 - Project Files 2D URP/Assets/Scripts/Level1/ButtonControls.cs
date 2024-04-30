@@ -10,6 +10,7 @@ public class ButtonControls : MonoBehaviour
     public TextMeshProUGUI ObjectiveText;
     public string Objective;
     public GameObject specificDoor;
+    public GameObject specificButton;
     
     
 
@@ -24,7 +25,7 @@ public class ButtonControls : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("ButtonSound");
             ObjectiveText.text = Objective;
             Destroy(specificDoor.gameObject);
-            
+            Destroy(specificButton.gameObject);
         }
         else
         {

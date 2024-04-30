@@ -16,6 +16,7 @@ public class ObjectiveTrigger : MonoBehaviour
            
             ObjectiveText.text = Objective;
             FindAnyObjectByType<AudioManager>().Play("ButtonSound");
+            Destroy(gameObject);
         }
     }
 }

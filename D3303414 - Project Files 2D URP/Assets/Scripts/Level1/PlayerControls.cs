@@ -101,7 +101,7 @@ public class PlayerControls : MonoBehaviour
         {
             animator.SetBool("IsJumping?", true);
             rb.velocity = new Vector2(rb.velocity.x, jump);
-            isjumping = false;
+            isjumping = false; //This will allow the player to jump again.
             jump = 13;
             coyoteTimeCounter = 0;
             //Will find the audio and play the sound that has that name attached to it.

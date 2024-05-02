@@ -58,7 +58,7 @@ public class PlayerLivesLevel1 : MonoBehaviour
         if (trail != null)
         {
             trail.enabled = true;
-            trail.Clear();
+            trail.Clear(); //This will reset the trail so that it doesn't stay where the player was for a second.
         }
         spriteRenderer.enabled = true;
         StartCoroutine("Flicker");

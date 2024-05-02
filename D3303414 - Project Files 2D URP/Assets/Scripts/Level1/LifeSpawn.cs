@@ -5,7 +5,7 @@ using UnityEngine;
 public class LifeSpawn : MonoBehaviour
 {
     public GameObject life;
-    public Vector2 spawnPosition;
+    public Vector2 spawnPosition; //This will set the spawn point above the chest.
   
     private void OnTriggerEnter2D(Collider2D other)
     {

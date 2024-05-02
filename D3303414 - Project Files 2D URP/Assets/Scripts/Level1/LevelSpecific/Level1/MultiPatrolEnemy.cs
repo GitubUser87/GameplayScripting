@@ -22,7 +22,7 @@ public class MultiPatrolEnemy : MonoBehaviour
     {
         Vector2 newPosition = Vector2.MoveTowards(body.position, waypoints[wayPointIndex], speed); //This will set the new waypoint as the objects new destination.
         body.MovePosition(newPosition);
-        if (Vector2.Distance(newPosition, waypoints[wayPointIndex]) < 0.1f)
+        if (Vector2.Distance(newPosition, waypoints[wayPointIndex]) < 0.1f) //This will flip the enemies sprite so that it will face the correct direction.
         {
             wayPointIndex = (wayPointIndex + 1) % waypoints.Length;
             spriteRenderer.flipX = true;

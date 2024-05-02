@@ -38,14 +38,14 @@ public class MultiPatrolPop_Up : MonoBehaviour
             {
                 if (wayPointIndex == 0)
                 {
-                    movementAllowed = false;
+                    movementAllowed = false; //This will make sure that the enemy can only move if the bool has been set to true.
                 }
                 wayPointIndex = (wayPointIndex + 1) % waypoints.Length;
 
             }
         }
     }
-    void OnDrawGizmosSelected()
+    void OnDrawGizmosSelected() //This will present the waypoints connected by a line in editor mode.
     {
         Gizmos.color = Color.yellow;
         Vector2 lastPosition = waypoints[0];

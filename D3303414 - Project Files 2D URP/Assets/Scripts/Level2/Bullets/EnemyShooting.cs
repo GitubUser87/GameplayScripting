@@ -10,7 +10,7 @@ public class EnemyShooting : MonoBehaviour
     public float bulletSpeed = 10;
     public float fireRate = 1f;
     float lastShotTime = 0;
-    // Update is called once per frame
+
     void Update()
     {
         transform.Rotate (0,0,50*Time.deltaTime);

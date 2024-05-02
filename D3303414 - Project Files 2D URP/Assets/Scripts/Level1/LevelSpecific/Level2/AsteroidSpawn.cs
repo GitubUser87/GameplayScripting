@@ -21,6 +21,6 @@ public class AsteroidSpawn : MonoBehaviour
     void Spawn()
     {
         Instantiate(Asteroid, transform.position, transform.rotation);
-        //This will create a new asteroid.
+        
     }
 }

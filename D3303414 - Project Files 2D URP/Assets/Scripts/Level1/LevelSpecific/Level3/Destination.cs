@@ -13,7 +13,7 @@ public class Destination : MonoBehaviour
         if (cameraBounds != null)
         {
             var confiner = FindAnyObjectByType<CinemachineConfiner>();
-            confiner.m_BoundingShape2D = cameraBounds;
+            confiner.m_BoundingShape2D = cameraBounds; //This will set the players camera to the new camera bounds so that the player will still appear on screen.
         }
         return destination; 
     }   

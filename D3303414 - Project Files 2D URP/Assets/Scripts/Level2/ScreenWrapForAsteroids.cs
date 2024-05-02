@@ -26,7 +26,7 @@ public class ScreenWrapForAsteroids : MonoBehaviour
         
     }
 
-    void Update()
+    void Update() //This will detect if the object has reached these coordinates and will then set them to the new ones, it will also clear any trail effects.
     {
 
         if (transform.position.x < leftConstraint - buffer)

@@ -7,6 +7,8 @@ public class SpawnSmallerAsteroid : MonoBehaviour
 
     public GameObject Smallerasteroid;
 
+    //This will spawn in smaller asteroids should the bigger one be destroyed.
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Bullet")

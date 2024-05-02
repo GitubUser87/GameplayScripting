@@ -24,6 +24,7 @@ public class Bullets : MonoBehaviour
         {
             
             Destroy(gameObject);
+            //This will destroy the bullet so that it won't go on forever.
         }
     }
 }

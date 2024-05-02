@@ -19,7 +19,7 @@ public class MovingPlatform : MonoBehaviour
 
     private void Update()
     {
-        //This will call the platform and have it move to the transform labelled as endPoint.
+        //This will call the platform and have it move to the transform labelled as endPoint. Once it reaches it's destination it will stop.
         if (Vector2.Distance(transform.position, startPoint.position) < .1f) targetPos = endPoint.position;
 
         transform.position = Vector2.MoveTowards(transform.position, targetPos, Speed * Time.deltaTime);

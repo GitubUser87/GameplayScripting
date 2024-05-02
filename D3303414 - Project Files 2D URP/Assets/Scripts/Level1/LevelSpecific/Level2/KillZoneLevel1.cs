@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class KillZoneLevel1 : MonoBehaviour
 {
-   
+   //This specifically designed for level 2 as it doesn't have any lives.
 
     private void OnTriggerEnter2D(Collider2D other)
     {

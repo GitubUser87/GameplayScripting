@@ -31,6 +31,7 @@ public class AsteroidMovement : MonoBehaviour
 
     void SetNewDestination()
     {
+        //This will pick a random range between the max distances and set it as the new coordinates.
         wayPoint = new Vector2(Random.Range( -maxDistance, maxDistance), Random.Range( -maxDistance, maxDistance));
     }
 }

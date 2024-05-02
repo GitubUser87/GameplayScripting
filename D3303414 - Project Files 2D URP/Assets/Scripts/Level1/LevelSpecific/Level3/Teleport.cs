@@ -12,10 +12,8 @@ public class Teleport : MonoBehaviour
         {
             if (currentTeleporter != null)
             {
-                transform.position = currentTeleporter.GetComponent<Destination>().GetDestination().position;
+                transform.position = currentTeleporter.GetComponent<Destination>().GetDestination().position; //This will set the players new location as the entered destination.
                 FindObjectOfType<AudioManager>().Play("Door");
-               
-
             }
         }
     }

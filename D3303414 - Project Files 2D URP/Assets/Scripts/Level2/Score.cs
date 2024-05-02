@@ -4,7 +4,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
-using UnityEngine.SocialPlatforms.GameCenter;
+
 
 
 public class Score : MonoBehaviour

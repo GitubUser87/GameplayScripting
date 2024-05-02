@@ -3161,7 +3161,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1745712010}
         m_TargetAssemblyTypeName: MainMenuFunction, Assembly-CSharp
-        m_MethodName: playGame2
+        m_MethodName: playLevel2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3757,7 +3757,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1745712010}
         m_TargetAssemblyTypeName: MainMenuFunction, Assembly-CSharp
-        m_MethodName: playGame3
+        m_MethodName: playLevel3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5246,7 +5246,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.06, y: 2.06}
-  m_SizeDelta: {x: 450.0542, y: 83.1773}
+  m_SizeDelta: {x: 521.2521, y: 83.1773}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1565417442
 MonoBehaviour:
@@ -5270,7 +5270,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Select a level:
 
-    Please complete fully first:'
+    Please complete Game 1 first:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

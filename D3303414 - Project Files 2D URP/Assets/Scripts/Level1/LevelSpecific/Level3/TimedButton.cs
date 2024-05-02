@@ -46,9 +46,10 @@ public class TimedButton : MonoBehaviour
             spriteRenderer.color = new Color(0f, 1f, 0f, 1f);
         }
 
-        if (Timer <= 5f)
+        if (Timer <= 5f && Timer != 0)
         {
-            //StartCoroutine("Flickering");
+            spriteRenderer.enabled = true;
+            StartCoroutine("Flickering");
         }
 
         if (Timer <= 0f)
@@ -59,16 +60,16 @@ public class TimedButton : MonoBehaviour
             buttonActive = true;
         }
 
-        //IEnumerator Flickering()
-        //{
-        //    float time = 1f;
-        //    while (time > 0)
-        //    {
-        //        spriteRenderer.color = new Color(1f, 1f, 1f, (Mathf.Sin(time * 50) + 1) * 0.5f);
-        //        yield return null;
-        //        time = time - Time.deltaTime;
-        //    }
-        //}
+        
     }
-
+    IEnumerator Flickering()
+    {
+        float time = 0.5f;
+        while (time > 0)
+        {
+            spriteRenderer.color = new Color(0f, (Mathf.Sin(time * 50) + 1) * 0.5f, 0f, 1f);
+            yield return null;
+            time = time - Time.deltaTime;
+        }
+    }
 }

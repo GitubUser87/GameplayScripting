@@ -15873,6 +15873,10 @@ PrefabInstance:
       propertyPath: Objective
       value: Enter the door.
       objectReference: {fileID: 0}
+    - target: {fileID: 4998213548939774137, guid: 212b531524dcdb24ebee1f47113b7128, type: 3}
+      propertyPath: ObjectiveText
+      value: 
+      objectReference: {fileID: 1669684811}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
